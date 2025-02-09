@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alhadi Daycare & PreSchool</title>
+    <link rel="icon" href="assets/logo-alhadi.png" type="image/png">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Monday+Feelings&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+       
+        /* Menghapus padding horizontal pada body */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Menghapus padding default pada container-fluid */
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Atur ulang navbar untuk menempel ke sisi layar */
+.navbar {
+  margin: 0;
+  width: 100%;
+}
+
+
+    /* Ukuran default untuk layar besar */
+.navbar-brand .logo {
+    width: 130px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+/* Ukuran logo lebih kecil untuk layar mobile */
+@media (max-width: 576px) {
+    .navbar-brand .logo {
+        width: 80px; /* Kurangi ukuran */
+        height: auto; /* Pastikan proporsi tetap */
+    }
+}
+
+        
+    </style>
+</head>
+
+    <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand text-black fw-bold" href="index.html">
+      <img
+        src="assets/logo-alhadi.png"
+        alt="Logo"
+        width="130"
+        height="60"
+        class="d-inline-block align-text-top"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item px-3">
+          <a class="nav-link active text-black fw-semibold" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link text-black fw-semibold" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link text-black fw-semibold" href="about.html">About Us</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+ <!-- Carousel Start -->
+<div id="carouselExampleCaptions" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="assets/alhadi-slide1.png" class="d-block w-100 img-fluid" alt="Slide 1">
+        </div>
+        <div class="carousel-item position-relative">
+            <img src="assets/alhadi-slide2.png" class="d-block w-100 img-fluid slide-image" alt="Slide 2">
+            <div class="carousel-caption d-flex justify-content-center align-items-center h-100">
+            </div>
+
+        </div>
+        
+        <div class="carousel-item">
+            <img src="assets/alhadi-slide3.png" class="d-block w-100 img-fluid" alt="Slide 3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- Carousel End -->
+
+
+
+   <!-- Start Card -->
+<div class="container fade-in text-center">
+    <h1 class="m-0 p-5">Program Unggulan Kami</h1>
+  </div>
+  
+  <div class="container">
+    <div class="row g-3">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card fade-in" style="width: 100%; height: 100%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="assets/1Daycare.jpg" class="card-img-top" alt="Daycare">
+                <div class="card-body" style="font-family: 'Comic Sans MS', sans-serif;">
+                    <h5 class="card-title">Daycare</h5>
+                    <p class="card-text">Bukan sekadar tempat penitipan, Alhadi Daycare adalah rumah kedua bagi anak Anda! Kami menyediakan lingkungan yang aman, nyaman, dan penuh kasih sayang, sehingga orang tua dapat bekerja dengan tenang tanpa khawatir.</p>
+                </div>
+            </div>
+        </div>
+  
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card fade-in" style="width: 100%; height: 100%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="assets/2preschool.jpg" class="card-img-top" alt="Preschool">
+                <div class="card-body" style="font-family: 'Comic Sans MS', sans-serif;">
+                    <h5 class="card-title">Preschool</h5>
+                    <p class="card-text">Masa golden age adalah waktu terbaik untuk membangun fondasi pendidikan anak. Di Preschool Alhadi, kami menggabungkan metode belajar yang interaktif, kreatif, dan Islami untuk membantu anak berkembang secara akademik, sosial, dan emosional.</p>
+                </div>
+            </div>
+        </div>
+  
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card fade-in" style="width: 100%; height: 100%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="assets/3bimbel.jpg" class="card-img-top" alt="Bimbel">
+                <div class="card-body" style="font-family: 'Comic Sans MS', sans-serif;">
+                    <h5 class="card-title">Bimbel</h5>
+                    <p class="card-text">Kami memahami bahwa setiap anak memiliki gaya belajar yang berbeda. Oleh karena itu, Bimbel Alhadi hadir untuk membantu anak memahami pelajaran dengan cara yang mudah dan menyenangkan.</p>
+                </div>
+            </div>
+        </div>
+  
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card fade-in" style="width: 100%; height: 100%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="assets/4tahfidz.jpg" class="card-img-top" alt="Tahfidz">
+                <div class="card-body" style="font-family: 'Happy Monkey';">
+                    <h5 class="card-title">Tahfidz</h5>
+                    <p class="card-text">Program Tahfidz Alhadi dirancang untuk membimbing anak dalam menghafal Al-Qur’an dengan metode yang efektif, menyenangkan, dan tidak membebani anak.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center fade-in" >
+        <button class="btn btn-lg btn-success px-5 mt-5 fade-in">Daftar Sekarang</button>
+    </div>
+    
+  </div>
+  
+  
+  
+ 
+ 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill=" #e4f8e4" fill-opacity="1" d="M0,128L48,128C96,128,192,128,288,149.3C384,171,480,213,576,234.7C672,256,768,256,864,245.3C960,235,1056,213,1152,197.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+<!-- End Of Card -->
+
+<!-- Section 1 -->
+
+<!-- Content section 1 -->
+<section id="scroll" style="background-color: #e4f8e4;">
+    <div class="testimonial-container fade-in">
+        
+      <div class="text-center mx-auto mb-5 wow fade-in" data-wow-delay="0.1s" style="max-width: 600px;">
+        <p class="section-title px-5"><span class="px-2" style="background-color: #e4f8e4;">Kegiatan</span></p>
+        <h1 class="mb-3">Kegiatan Kami</h1>
+        <p>Di Al Hadi Daycare, anak-anak dibiasakan shalat berjamaah dan mengaji setiap hari, mencakup hafalan doa, bacaan Al-Qur’an, serta pengenalan huruf hijaiyah dengan metode interaktif. Kegiatan belajar mengajar dilakukan dengan konsep bermain sambil belajar, mengenalkan angka, huruf, serta keterampilan motorik dan sosial melalui aktivitas kreatif. Selain itu, outing class ke tempat edukatif seperti kebun binatang dan museum memberikan pengalaman belajar langsung yang menyenangkan dan memperkuat interaksi sosial anak.</p>
+    </div>
+  <div class="container px-5">
+      <div class="row gx-5 align-items-center">
+          <div class="col-lg-6 order-lg-2 fade-in">
+              <div class="p-5"><img class="img-fluid" src="assets/section2.jpg" alt="..." style="box-shadow: rgba(240, 162, 46, 0.4) 5px 5px, rgba(240, 162, 46, 0.3) 10px 10px, rgba(240, 162, 46, 0.2) 15px 15px, rgba(240, 162, 46, 0.1) 20px 20px, rgba(240, 162, 46, 0.05) 25px 25px; width: 400px; height: auto;" /></div>
+          </div>
+          <div class="col-lg-6 order-lg-1 fade-in">
+              <div class="p-5">
+                  <h2 >Shalat Berjamaah & Aktivitas Mengaji</h2>
+                  <p>Di Al Hadi Daycare, anak-anak dibiasakan untuk melaksanakan shalat berjamaah sejak dini, menanamkan nilai kedisiplinan dan kebersamaan dalam beribadah. Selain itu, mereka juga mengikuti kegiatan mengaji yang mencakup pengenalan huruf hijaiyah, hafalan doa harian, serta pembelajaran Al-Qur’an dengan metode yang menyenangkan.
+                </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Content section 2 -->
+<section style="background-color: #e4f8e4;" class="mb-0">
+  <div class="container px-5  ">
+      <div class="row gx-5 align-items-center">
+          <div class="col-lg-6">
+              <div class="p-5 fade-in"><img class="img-fluid" src="assets/kbm.jpg" alt="..." style="box-shadow: rgba(240, 162, 46, 0.4) -5px 5px, rgba(240, 162, 46, 0.3) -10px 10px, rgba(240, 162, 46, 0.2) -15px 15px, rgba(240, 162, 46, 0.1) -20px 20px, rgba(240, 162, 46, 0.05) -25px 25px; width: 400px; height: auto;" /></div>
+          </div>
+          <div class="col-lg-6">
+              <div class="p-5 fade-in">
+                  <h2 >Kegiatan Belajar Mengajar</h2>
+                  <p>Proses belajar mengajar di Al Hadi Daycare dirancang untuk merangsang perkembangan kognitif, motorik, dan sosial anak. Anak-anak diajak untuk belajar melalui metode interaktif, seperti bermain sambil belajar, eksplorasi, serta kegiatan kreatif yang membantu mereka memahami konsep dasar dengan cara yang menyenangkan</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Content section 3 -->
+<section style="background-color: #e4f8e4;" class="mb-0">
+  <div class="container px-5">
+      <div class="row gx-5 align-items-center">
+          <div class="col-lg-6 order-lg-2">
+              <div class="p-5 fade-in"><img class="img-fluid" src="assets/section4.png" alt="..." style="box-shadow: rgba(240, 162, 46, 0.4) 5px 5px, rgba(240, 162, 46, 0.3) 10px 10px, rgba(240, 162, 46, 0.2) 15px 15px, rgba(240, 162, 46, 0.1) 20px 20px, rgba(240, 162, 46, 0.05) 25px 25px; width: 400px; height: auto;" /></div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+              <div class="p-5 fade-in">
+                  <h2 >Program Outing Class</h2>
+                  <p>Untuk memberikan pengalaman belajar yang lebih luas, Al Hadi Daycare mengadakan outing class ke berbagai tempat edukatif. Kegiatan ini dirancang agar anak-anak dapat belajar langsung dari lingkungan sekitar, mengenal alam, serta memperkuat keterampilan sosial mereka melalui pengalaman di luar kelas.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill=" #e4f8e4" fill-opacity="1" d="M0,128L48,128C96,128,192,128,288,149.3C384,171,480,213,576,234.7C672,256,768,256,864,245.3C960,235,1056,213,1152,197.3C1248,181,1344,171,1392,165.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+<!-- End Of Section 1 -->
+
+<!-- Fasilitas -->
+<div class="container-xxl py-5 pt-0" >
+  <div class="container " >
+      <div class="text-center mx-auto mb-5 wow fade-in" data-wow-delay="0.1s" style="max-width: 600px;">
+          <h1 class="mb-3 ">Fasilitas</h1>
+          <p style="text-align: center;">Al Hadi Daycare hadir sebagai solusi bagi orang tua yang menginginkan tempat penitipan anak yang aman, nyaman, dan berbasis pendidikan Islami. Sejak berdiri pada 5 Januari 2016, kami telah menjadi rumah kedua bagi banyak anak, membantu mereka bertumbuh dalam lingkungan yang penuh kasih sayang, stimulasi positif, serta pendidikan yang mendukung perkembangan karakter dan intelektual mereka</p>
+      </div>
+      <div class="row g-4">
+          <div class="col-lg-3 col-sm-6 wow fade-in" data-wow-delay="0.1s">
+              <div class="fasilitas-item">
+                  <div class="fasilitas-icon bg-primary">
+                      <i class="fa fa-bed fa-3x text-primary"></i>
+                  </div>
+                  <div class="fasilitas-text bg-primary">
+                      <h3 class="text-primary mb-3">Kamar Tidur</h3>
+                      <p class="mb-0">
+                        Area istirahat yang higienis & tenang untuk kenyamanan anak</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fade-in" data-wow-delay="0.3s">
+              <div class="fasilitas-item">
+                  <div class="fasilitas-icon bg-success">
+                      <i class="fa fa-3x fa-puzzle-piece text-success"></i>
+                  </div>
+                  <div class="fasilitas-text bg-success">
+                      <h3 class="text-success mb-3">Arena Bermain Yang Luas</h3>
+                      <p class="mb-0">Tempat bermain edukatif yang merangsang kreativitas dan motorik anak</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fade-in" data-wow-delay="0.5s">
+              <div class="fasilitas-item">
+                  <div class="fasilitas-icon bg-warning">
+                      <i class="fa fa-solid fa-bowl-rice fa-3x text-warning"></i>
+                  </div>
+                  <div class="fasilitas-text bg-warning">
+                      <h3 class="text-warning mb-3">Makanan Bernutrisi</h3>
+                      <p class="mb-0">Menu sehat & bergizi untuk menunjang pertumbuhan anak</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fade-in" data-wow-delay="0.7s">
+              <div class="fasilitas-item">
+                  <div class="fasilitas-icon bg-info">
+                      <i class="fa fa-chalkboard-teacher fa-3x text-info"></i>
+                  </div>
+                  <div class="fasilitas-text bg-info">
+                      <h3 class="text-info mb-3">Ruang Kelas Yang Nyaman</h3>
+                      <p class="mb-0">Suasana yang sejuk dan nyaman untuk anak bermain & belajar</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End Of Fasilitas -->
+
+<!-- Jam Operasional -->
+<div class="container-fluid pt-5">
+    <div class="row">
+        <div class="col-12 pb-1">
+            <div class="d-flex bg-light shadow-sm border-top rounded mb-4 fade-in align-items-center justify-content-center" style="padding: 30px; width: 100%;">
+                <i class="fa-regular fa-calendar-days h1 mb-3 px-3"></i>
+                <div class="pl-4 text-center">
+                    <h4>Waktu Operasional</h4>
+                    <ul class="fade-in list-unstyled">
+                        <li>Senin - Jumat: 07:00 - 17:00</li>
+                        <li>Sabtu: 07:00 - 13:00</li>
+                        <li>Minggu: Tutup</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Jam Operasional End -->
+   
+
+
+  <!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Gambar -->
+        <div class="col-lg-4 d-flex justify-content-center fade-in">
+          <img
+            class="img-fluid rounded mb-5 mb-lg-0 align-self-center"
+            src="assets/section5.png"
+            alt="Al Hadi Daycare"
+          />
+        </div>
+  
+        <!-- Konten Teks -->
+        <div class="col-lg-7 fade-in">
+          <p class="section-title pr-5 ">
+            <span class="pr-1 ">Tentang Kami</span>
+          </p>
+          <h1 class="mb-3">Rumah Kedua Yang Nyaman</h1>
+          <p class="fade-in">
+            Al Hadi Daycare hadir sebagai solusi bagi orang tua yang
+            menginginkan tempat penitipan anak yang aman, nyaman, dan berbasis
+            pendidikan Islami. Sejak berdiri pada 5 Januari 2016, kami telah
+            menjadi rumah kedua bagi banyak anak, membantu mereka bertumbuh
+            dalam lingkungan yang penuh kasih sayang, stimulasi positif, serta
+            pendidikan yang mendukung perkembangan karakter dan intelektual
+            mereka
+          </p>
+      </div>
+    </div>
+    
+  </div>
+  <!-- About End -->
+  
+
+<!-- Class Start -->
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2 fade-in">
+            <p class="section-title px-5"><span class="px-2">Kelas Populer</span></p>
+            <h1 class="mb-4">Pilihan Kelas Untuk Anak Anda</h1>
+        </div>
+        <div class="row ">
+            <!-- Card 1 -->
+            <div class="col-lg-4 mb-5 ">
+                <div class="card border-0 bg-light shadow-sm pb-2 hover-card fade-in">
+                    <img class="card-img-top mb-2 fade-in" src="assets/section1.jpg" alt="">
+                    <div class="card-body text-center">
+                        <h4 class="card-title fade-in">Regular Group</h4>
+                        <p class="card-text fade-in">Regular group merupakan kelas rutin yang tersedia mulai pukul 07.00-17.00 WIB hari Senin sampai Jumat. Fasilitas yang Ananda dapatkan adalah pengasuhan, kegiatan edukasi, makan siang dan sore, cemilan buah atau biskuit, refill air minum, kasur, bantal, selimut, dan lain sebagainya.</p>
+                    </div>
+                    <div class="card-footer bg-transparent py-4 px-5 fade-in">
+                        <div class="row border-bottom ">
+                            <div class="col-6 py-1 text-right border-right "><strong>Usia</strong></div>
+                            <div class="col-6 py-1">0 - 6 Tahun</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right"><strong>Hari & Jam</strong></div>
+                            <div class="col-6 py-1">Senin - Jumat : 08:00 - 17:00 WIB</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 py-1 text-right border-right"><strong>Hari & Jam (Khusus)</strong></div>
+                            <div class="col-6 py-1">Sabtu : 07.00 - 13.00 WIB</div>
+                        </div>
+                    </div>
+                    <a href="" class="btn btn-success px-4 mx-auto mb-4">Daftar Sekarang</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4 mb-5">
+                <div class="card border-0 bg-light shadow-sm pb-2 hover-card fade-in">
+                    <img class="card-img-top mb-2 fade-in" src="assets/section2.jpg" alt="">
+                    <div class="card-body text-center">
+                        <h4 class="card-title fade-in">Irregular Group</h4>
+                        <p class="card-text fade-in">Irregular group merupakan kelas tidak rutin yang disediakan sebagai alternatif ketika dibutuhkan pada waktu-waktu tertentu. Misalnya, ketika Ayah bekerja penuh waktu dan Bunda berprofesi sebagai konsultan, Ananda dapat mengikuti kelas ini jika tidak ada yang menjaganya.</p>
+                    </div>
+                    <div class="card-footer bg-transparent py-4 px-5 fade-in">
+                        <div class="row border-bottom ">
+                            <div class="col-6 py-1 text-right border-right "><strong>Usia</strong></div>
+                            <div class="col-6 py-1">0 - 6 Tahun</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right"><strong>Hari & Jam</strong></div>
+                            <div class="col-6 py-1">Senin - Jumat : 08:00 - 17:00 WIB</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 py-1 text-right border-right"><strong>Hari & Jam (Khusus)</strong></div>
+                            <div class="col-6 py-1">Sabtu : 07.00 - 13.00 WIB</div>
+                        </div>
+                    </div>
+                    <a href="" class="btn btn-success px-4 mx-auto mb-4">Daftar Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Class End -->
+
+  <!-- Testimonial Start -->
+<div class="testimonial-container ">
+  <div class="text-center pb-2 fade-in">
+    <p class="section-title px-5"><span class="px-2">Testimoni</span></p>
+    <h1 class="mb-4">Berbagi Pengalaman</h1>
+</div>
+  <div id="testimonial" class="carousel slide testimonial-carousel" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active">
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto">
+                    <img src="assets/userprofile.png" class="rounded-circle mb-4 fade-in" alt="User 1" style="width: 100px; height: 100px; object-fit: cover;">
+                    <h5 class="fade-in">Alifa Irlinda</h5>
+                    <p class="text-muted fade-in">"Daycare luar biasa dengan miss-miss super sabar dan penyayang. Tidak hanya menjaga anak-anak, daycare ini juga membekali anak-anak dengan banyak keterampilan dan pengetahuan. Fondasi Islami yang kuat membentuk anak jadi pribadi yang dekat dengan agama. Highly recommended."</p>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="carousel-item">
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto">
+                    <img src="assets/userprofile.png" class="rounded-circle mb-4 fade-in" alt="User 2" style="width: 100px; height: 100px; object-fit: cover;">
+                    <h5 class="fade-in">Sarah F. Hapsari</h5>
+                    <p class="text-muted fade-in">"Daycare yg profesional karena ownernya passion sekali di dunia anak2 dan pendidikan. Selain itu growth mindset banget tim2nya, kalau ada feedback dari wali murid ditanggapi dengan baik.
+                        Oya disini ada pre school dan tahfiz, jadi one stop education buat orang tua2 yang mencari basic pendidikan agama islam utk putra putrinya, sukses terus ya Al Hadi !"</p>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="carousel-item">
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto">
+                    <img src="assets/userprofile.png" class="rounded-circle mb-4 fade-in" alt="User 3" style="width: 100px; height: 100px; object-fit: cover;">
+                    <h5 class="fade-in">Putri Wardhani</h5>
+                    <p class="text-muted fade-in">"Daycare amanah dan edukatif daerah jakarta barat dengan miss-miss yang care dan penyayang. Fasilitas lengkap dan ditunjang dengan program stimulasi motorik, sensorik, linguistik dan agam utk anak sesuai dengan usia"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Custom Controls -->
+    <button class="carousel-control-prev testimonial-control" type="button" data-bs-target="#testimonial" data-bs-slide="prev">
+        <span class="testimonial-control-icon">
+            <i class="fa fa-chevron-left fade-in"></i>
+        </span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next testimonial-control" type="button" data-bs-target="#testimonial" data-bs-slide="next">
+        <span class="testimonial-control-icon">
+            <i class="fa fa-chevron-right fade-in"></i>
+        </span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</div>
+<!-- Testimonial End -->
+
+<!-- Back to Top -->
+<button
+type="button"
+class="btn btn-success btn-lg fade-in"
+id="btn-back-to-top"
+>
+<i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Floating Whatsapp -->
+<a href="https://api.whatsapp.com/send?phone=6285717996523&text=Assalamualaikum%20,%20saya%20ingin%20bertanya%20tentang%20al%20hadi%20daycare." class="float fade-in" target="_blank">
+    <i class="fa-brands fa-whatsapp my-float fade-in"></i>
+    </a>
+
+
+
+  <!-- Footer Start -->
+<footer class="text-center text-lg-start text-dark bg-light" style="margin-bottom: 0;">
+    <!-- Section: Social Media -->
+    <section class="d-flex justify-content-between p-4 text-dark" style="background-color: rgb(239, 239, 239);">
+        <!-- Left -->
+        <div>
+            <span>Ikuti Kami Di Media Sosial:</span>
+        </div>
+        <!-- Right -->
+        <div>
+            <a href="https://www.facebook.com/alhadidaycare/?locale=id_ID" target="_blank" class="text-dark me-4"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:alhadidaycare2@gmail.com?subject=Permintaan Informasi&body=Halo, saya ingin tahu lebih lanjut tentang..." target="_blank" class="text-dark me-4"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.instagram.com/alhadi_daycare/" target="_blank" class="text-dark me-4"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </section>
+    <!-- Section: Social Media -->
+
+   <!-- Section: Links -->
+   <section class="py-5 bg-success text-light">
+       <div class="container">
+           <div class="row align-items-center">
+               <!-- Contact -->
+               <div class="col-md-4 text-md-start mb-4">
+                   <h6 class="text-uppercase fw-bold">Contact</h6>
+                   <div class="d-flex flex-column">
+                       <div class="d-flex align-items-center mb-2">
+                           <i class="fa fa-map-location-dot me-3"></i>
+                           <span style="text-align: left;">Jl. Tolo, RT.1/RW.8, Srengseng, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11630</span>
+                       </div>
+                       <div class="d-flex align-items-center mb-2">
+                           <i class="fas fa-envelope me-3"></i>
+                           <span>AlhadiDaycare2@gmail.com</span>
+                       </div>
+                       <div class="d-flex align-items-center mb-2">
+                           <i class="fas fa-brands fa-whatsapp me-3"></i>
+                           <span>+62 857-1799-6523</span>
+                       </div>
+                   </div>
+               </div>
+               <!-- Google Maps -->
+               <div class="col-md-4 text-center mb-4">
+                   <h6 class="text-uppercase fw-bold">Google Maps</h6>
+                   <div class="google-maps d-flex justify-content-center">
+                       <iframe 
+                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.471073912843!2d106.75208067355406!3d-6.201416660747306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7399d40ffdf%3A0x729e0a9790853132!2sDaycare%20Al%20Hadi%20school!5e0!3m2!1sid!2sid!4v1739101122470!5m2!1sid!2sid" 
+                           width="300" height="200" 
+                           style="border:0;" 
+                           allowfullscreen="" 
+                           loading="lazy" 
+                           referrerpolicy="no-referrer-when-downgrade">
+                       </iframe>
+                   </div>
+               </div>
+               <!-- Company Info -->
+               <div class="col-md-4 text-md-end mb-4 text-center">
+                   <h6 class="text-uppercase fw-bold">Tentang Al Hadi</h6>
+                   <p style="text-align: justify;">Pendidikan yang diberikan di Al Hadi Daycare memiliki pendekatan yang unik dalam mengajarkan nilai-nilai agama, akhlak, dan karakter kepada anak-anak. Sejak dini, anak-anak diajarkan pendidikan agama, seperti do'a harian, dan ditempatkan terpisah untuk anak laki-laki dan perempuan saat tidur siang. Selain itu, anak-anak juga dapat menggunakan fasilitas pendidikan tambahan seperti Tahfidz Al Qur'an Al Hadi.
+                </p>
+               </div>
+           </div>
+       </div>
+   </section>
+   <!-- Section: Links -->
+
+   <!-- Horizontal Divider -->
+   <hr class="m-0" style="border: 1px solid white; background-color: white; height: 1px; width: 100%;">
+
+   <!-- Copyright -->
+   <div class="text-center p-3 bg-success text-light">
+       © 2025 Copyright:
+       <a class="text-white" href="https://mdbootstrap.com/">Alhadi-daycare-preschooljkt.com</a>
+   </div>
+</footer>
+<!-- Footer End -->
+ <!-- Add JavaScript -->
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".fade-in");
+  
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+  
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    });
+
+    //Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+  </script>
+  
+
+    <script src="js/main.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

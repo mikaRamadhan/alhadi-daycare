@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alhadi Daycare & PreSchool</title>
+    <link rel="icon" href="assets/logo-alhadi.png" type="image/png" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monday+Feelings&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      /* Menghapus padding horizontal pada body */
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Mencegah scroll horizontal */
+      }
+
+      /* Menghapus padding default pada container-fluid */
+      .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      /* Atur ulang navbar untuk menempel ke sisi layar */
+      .navbar {
+        margin: 0;
+        width: 100%;
+      }
+
+      /* Ukuran default untuk layar besar */
+      .navbar-brand .logo {
+        width: 130px;
+        height: auto;
+        transition: all 0.3s ease;
+      }
+
+      /* Ukuran logo lebih kecil untuk layar mobile */
+      @media (max-width: 576px) {
+        .navbar-brand .logo {
+          width: 80px; /* Kurangi ukuran */
+          height: auto; /* Pastikan proporsi tetap */
+        }
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .header {
+        position: relative;
+        background-image: url("assets/section1.jpg");
+        background-size: cover; /* Cover the entire area */
+        background-position: center;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      .header-content {
+        position: absolute;
+        z-index: 2;
+        color: white;
+        margin-left: 100px;
+      }
+
+      .header-content h3 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .header-content .breadcrumb {
+        font-size: 1.1rem;
+      }
+
+      @media (max-width: 768px) {
+        .header-content h3 {
+          font-size: 2rem;
+        }
+        .header-content .breadcrumb {
+          font-size: 0.9rem;
+        }
+      }
+      /* Google Maps */
+      .google-maps iframe {
+        max-width: 100%;
+        height: auto;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand text-black fw-bold" href="index.html">
+          <img
+            src="assets/logo-alhadi.png"
+            alt="Logo"
+            width="130"
+            height="60"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item px-3">
+              <a
+                class="nav-link text-black fw-semibold"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a
+                class="nav-link active text-black fw-semibold"
+                href="contact.html"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link text-black fw-semibold" href="about.html"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Header Start -->
+    <div class="header">
+      <div class="header-content">
+        <h3 class="display-0 text-white">Hubungi Kami</h3>
+        <div class="breadcrumb text-white">
+          <p class="m-0">
+            <a class="text-white text-decoration-none" href="index.html"
+              >Home</a
+            >
+          </p>
+          <p class="m-0 px-2">/</p>
+          <div class="breadcrumb text-white">
+            <p class="m-0">
+              <a class="text-white text-decoration-none" href="#">Contact</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Back to Top -->
+    <button
+      type="button"
+      class="btn btn-success btn-lg fade-in"
+      id="btn-back-to-top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Floating Whatsapp -->
+    <a
+      href="https://api.whatsapp.com/send?phone=6285717996523&text=Assalamualaikum%20,%20saya%20ingin%20bertanya%20tentang%20al%20hadi%20daycare."
+      class="float fade-in"
+      target="_blank"
+    >
+      <i class="fa-brands fa-whatsapp my-float fade-in"></i>
+    </a>
+
+    <!-- Footer Start -->
+    <footer
+      class="text-center text-lg-start text-dark bg-light"
+      style="margin-bottom: 0"
+    >
+      <!-- Section: Social Media -->
+      <section
+        class="d-flex justify-content-between p-4 text-dark"
+        style="background-color: rgb(239, 239, 239)"
+      >
+        <!-- Left -->
+        <div>
+          <span>Ikuti Kami Di Media Sosial:</span>
+        </div>
+        <!-- Right -->
+        <div>
+          <a
+            href="https://www.facebook.com/alhadidaycare/?locale=id_ID"
+            target="_blank"
+            class="text-dark me-4"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="mailto:alhadidaycare2@gmail.com?subject=Permintaan Informasi&body=Halo, saya ingin tahu lebih lanjut tentang..."
+            target="_blank"
+            class="text-dark me-4"
+            ><i class="fa-regular fa-envelope"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/alhadi_daycare/"
+            target="_blank"
+            class="text-dark me-4"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </section>
+      <!-- Section: Social Media -->
+
+      <!-- Section: Links -->
+      <section class="py-5 bg-success text-light">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Contact -->
+            <div class="col-md-4 text-md-start mb-4">
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <div class="d-flex flex-column">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="fa fa-map-location-dot me-3"></i>
+                  <span style="text-align: left"
+                    >Jl. Tolo, RT.1/RW.8, Srengseng, Kec. Kembangan, Kota
+                    Jakarta Barat, Daerah Khusus Ibukota Jakarta 11630</span
+                  >
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="fas fa-envelope me-3"></i>
+                  <span>AlhadiDaycare2@gmail.com</span>
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="fas fa-brands fa-whatsapp me-3"></i>
+                  <span>+62 857-1799-6523</span>
+                </div>
+              </div>
+            </div>
+            <!-- Google Maps -->
+            <div class="col-md-4 text-center mb-4">
+              <h6 class="text-uppercase fw-bold">Google Maps</h6>
+              <div class="google-maps d-flex justify-content-center">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.471073912843!2d106.75208067355406!3d-6.201416660747306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7399d40ffdf%3A0x729e0a9790853132!2sDaycare%20Al%20Hadi%20school!5e0!3m2!1sid!2sid!4v1739101122470!5m2!1sid!2sid"
+                  width="300"
+                  height="200"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
+            <!-- Company Info -->
+            <div class="col-md-4 text-md-end mb-4 text-center">
+              <h6 class="text-uppercase fw-bold">Tentang Al Hadi</h6>
+              <p style="text-align: justify">
+                Pendidikan yang diberikan di Al Hadi Daycare memiliki pendekatan
+                yang unik dalam mengajarkan nilai-nilai agama, akhlak, dan
+                karakter kepada anak-anak. Sejak dini, anak-anak diajarkan
+                pendidikan agama, seperti do'a harian, dan ditempatkan terpisah
+                untuk anak laki-laki dan perempuan saat tidur siang. Selain itu,
+                anak-anak juga dapat menggunakan fasilitas pendidikan tambahan
+                seperti Tahfidz Al Qur'an Al Hadi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Links -->
+
+      <!-- Horizontal Divider -->
+      <hr
+        class="m-0"
+        style="
+          border: 1px solid white;
+          background-color: white;
+          height: 1px;
+          width: 100%;
+        "
+      />
+
+      <!-- Copyright -->
+      <div class="text-center p-3 bg-success text-light">
+        © 2025 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/"
+          >Alhadi-daycare-preschooljkt.com</a
+        >
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <button
+      type="button"
+      class="btn btn-success btn-lg fade-in"
+      id="btn-back-to-top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+          }
+        );
+
+        cards.forEach((card) => {
+          observer.observe(card);
+        });
+      });
+
+      //Get the button
+      let mybutton = document.getElementById("btn-back-to-top");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      // When the user clicks on the button, scroll to the top of the document
+      mybutton.addEventListener("click", backToTop);
+
+      function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
