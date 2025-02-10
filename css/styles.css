@@ -385,3 +385,15 @@ h4 {
   opacity: 1;
   transform: translateY(0);
 }
+.card {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px; /* Sudut membulat */
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Efek saat card di-hover */
+.card:hover {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3), 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Sedikit mengangkat card */
+}
