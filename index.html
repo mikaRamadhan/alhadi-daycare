@@ -60,45 +60,80 @@ footer {
 </head>
 
     <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg  navbar-light">
-  <div class="container-fluid">
-    <a class="navbar-brand text-black fw-bold" href="index.html">
-      <img
-        src="assets/logo-alhadi.png"
-        alt="Logo"
-        width="110"
-        height="40"
-        class="d-inline-block align-text-top"
-      />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item px-3">
-          <a class="nav-link active text-black fw-semibold" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link text-black fw-semibold" href="location.html">Location</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link text-black fw-semibold" href="about.html">About Us</a>
-        </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- Navbar End -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand text-black fw-bold" href="index.html">
+            <img
+              src="assets/logo-alhadi.png"
+              alt="Logo"
+              width="110"
+              height="40"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item px-3">
+                <a
+                  class="nav-link active text-black fw-semibold"
+                  aria-current="page"
+                  href="index.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="nav-item px-3">
+                <a
+                  class="nav-link text-black fw-semibold"
+                  href="location.html"
+                  >Lokasi</a
+                >
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link text-black fw-semibold" href="about.html"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li class="nav-item dropdown px-3">
+                <a
+                  class="nav-link dropdown-toggle text-black fw-semibold"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Fasilitas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a
+                    class="nav-link dropdown-item text-black fw-semibold"
+                    href="building.html"
+                    >Gedung</a
+                  >
+                  <a
+                    class="nav-link dropdown-item text-black fw-semibold"
+                    href="menu.html"
+                    >Menu Makanan</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
  <!-- Carousel Start -->
 <div id="carouselExampleCaptions" class="carousel carousel-dark slide">
     <div class="carousel-indicators">
@@ -388,16 +423,20 @@ footer {
                     <img class="card-img-top mb-2 fade-in" src="assets/section1.jpg" alt="">
                     <div class="card-body text-center">
                         <h4 class="card-title fade-in">Regular Group</h4>
-                        <p class="card-text fade-in">Regular group merupakan kelas rutin yang tersedia...</p>
+                        <p class="card-text fade-in">Regular group merupakan kelas rutin yang tersedia mulai pukul
+                            07.00-17.00 WIB hari senin sampai dengan hari jum’at. Fasilitas
+                            yang Ananda dapatkan adalah pengasuhan, kegiatan edukasi, makan
+                            siang dan sore, cemilan buah atau biskuit, refill air minum, kasur,
+                            bantal, selimut, dan lain sebagainya....</p>
                     </div>
                     <div class="card-footer bg-transparent py-4 px-5 fade-in">
                         <div class="row border-bottom">
                             <div class="col-6 py-1 text-right border-right"><strong>Usia</strong></div>
-                            <div class="col-6 py-1">0 - 6 Tahun</div>
+                            <div class="col-6 py-1">0 Bulan - 12 Tahun</div>
                         </div>
                         <div class="row border-bottom">
                             <div class="col-6 py-1 text-right border-right"><strong>Hari & Jam</strong></div>
-                            <div class="col-6 py-1">Senin - Jumat : 08:00 - 17:00 WIB</div>
+                            <div class="col-6 py-1">Senin - Jumat <br><br>07:00 - 12:00 WIB (Full Day)<br><br> 12:00 - 17:00 WIB (Half Day)</div>
                         </div>
                         <div class="row">
                             <div class="col-6 py-1 text-right border-right"><strong>Hari & Jam (Khusus)</strong></div>
@@ -414,16 +453,20 @@ footer {
                     <img class="card-img-top mb-2 fade-in" src="assets/section2.jpg" alt="">
                     <div class="card-body text-center">
                         <h4 class="card-title fade-in">Irregular Group</h4>
-                        <p class="card-text fade-in">Irregular group merupakan kelas tidak rutin...</p>
+                        <p class="card-text fade-in">Irregular group merupakan kelas tidak rutin yang disediakan sebagai
+                            alternatif ketika dibutuhkan pada waktu-waktu tertentu. Misalnya,
+                            ketika Ayah bekerja penuh waktu dan Bunda berprofesi sebagai
+                            konsultan, Ananda dapat mengikuti kelas ini jika tidak ada yang
+                            menjaganya.</p>
                     </div>
                     <div class="card-footer bg-transparent py-4 px-5 fade-in">
                         <div class="row border-bottom">
                             <div class="col-6 py-1 text-right border-right"><strong>Usia</strong></div>
-                            <div class="col-6 py-1">0 - 6 Tahun</div>
+                            <div class="col-6 py-1">0 Bulan - 12 Tahun</div>
                         </div>
                         <div class="row border-bottom">
                             <div class="col-6 py-1 text-right border-right"><strong>Hari & Jam</strong></div>
-                            <div class="col-6 py-1">Senin - Jumat : 08:00 - 17:00 WIB</div>
+                            <div class="col-6 py-1">Senin - Jumat <br><br>07:00 - 12:00 WIB (Full Day)<br><br> 12:00 - 17:00 WIB (Half Day)</div>
                         </div>
                         <div class="row">
                             <div class="col-6 py-1 text-right border-right"><strong>Hari & Jam (Khusus)</strong></div>
@@ -506,7 +549,7 @@ id="btn-back-to-top"
 </button>
 
 <!-- Floating Whatsapp -->
-<a href="https://api.whatsapp.com/send?phone=6285717996523&text=Assalamualaikum%20,%20saya%20ingin%20bertanya%20tentang%20al%20hadi%20daycare." class="float fade-in" target="_blank">
+<a href="https://api.whatsapp.com/send?phone=6281289497397&text=Assalamualaikum%20,%20saya%20ingin%20bertanya%20tentang%20al%20hadi%20daycare." class="float fade-in" target="_blank">
     <i class="fa-brands fa-whatsapp my-float fade-in"></i>
     </a>
 
@@ -522,6 +565,7 @@ id="btn-back-to-top"
         </div>
         <!-- Right -->
         <div>
+            <a href="https://www.facebook.com/alhadidaycare/?locale=id_ID" target="_blank" class="text-dark me-4"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://www.facebook.com/alhadidaycare/?locale=id_ID" target="_blank" class="text-dark me-4"><i class="fab fa-facebook-f"></i></a>
             <a href="mailto:alhadidaycare2@gmail.com?subject=Permintaan Informasi&body=Halo, saya ingin tahu lebih lanjut tentang..." target="_blank" class="text-dark me-4"><i class="fa-regular fa-envelope"></i></a>
             <a href="https://www.instagram.com/alhadi_daycare/" target="_blank" class="text-dark me-4"><i class="fa-brands fa-instagram"></i></a>
@@ -542,13 +586,25 @@ id="btn-back-to-top"
                            <span style="text-align: left;">Jl. Tolo, RT.1/RW.8, Srengseng, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11630</span>
                        </div>
                        <div class="d-flex align-items-center mb-2">
-                           <i class="fas fa-envelope me-3"></i>
-                           <span>AlhadiDaycare2@gmail.com</span>
-                       </div>
-                       <div class="d-flex align-items-center mb-2">
-                           <i class="fas fa-brands fa-whatsapp me-3"></i>
-                           <span>+62 857-1799-6523</span>
-                       </div>
+                        <i class="fas fa-envelope me-3"></i>
+                        <span>alhadidaycare2@gmail.com</span>
+                      </div>
+                      <div class="d-flex flex-column mb-2">
+                        <div class="d-flex align-items-center">
+                          <i class="fas fa-brands fa-whatsapp me-3"></i>
+                          <span>+62 857-1799-6523</span>
+                        </div>
+                        <div class="d-flex align-items-center ms-4">
+                          <span class="me-2"></span>
+                          <span>+62 857-7256-1620</span>
+                        </div>
+                        <div class="d-flex align-items-center ms-4">
+                          <span class="me-2"></span>
+                          <span>+62 812-8949-7397</span>
+                        </div>
+                      </div>
+                      
+                      
                    </div>
                </div>
                <!-- Google Maps -->

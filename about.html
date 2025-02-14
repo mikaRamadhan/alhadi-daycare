@@ -4,58 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alhadi Daycare & PreSchool</title>
-    <link rel="icon" href="assets/logo-alhadi.png" type="image/png">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Monday+Feelings&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/logo-alhadi.png" type="image/png" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monday+Feelings&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <style>
-        /* Menghapus padding horizontal pada body */
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Mencegah scroll horizontal */
-}
+      /* Menghapus padding horizontal pada body */
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Mencegah scroll horizontal */
+      }
 
-/* Menghapus padding default pada container-fluid */
-.container-fluid {
-  padding-left: 0;
-  padding-right: 0;
-}
+      /* Menghapus padding default pada container-fluid */
+      .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+      }
 
-/* Atur ulang navbar untuk menempel ke sisi layar */
-.navbar {
-  margin: 0;
-  width: 100%;
-}
+      /* Atur ulang navbar untuk menempel ke sisi layar */
+      .navbar {
+        margin: 0;
+        width: 100%;
+      }
 
+      /* Ukuran default untuk layar besar */
+      .navbar-brand .logo {
+        width: 130px;
+        height: auto;
+        transition: all 0.3s ease;
+      }
 
-    /* Ukuran default untuk layar besar */
-.navbar-brand .logo {
-    width: 130px;
-    height: auto;
-    transition: all 0.3s ease;
-}
-
-/* Ukuran logo lebih kecil untuk layar mobile */
-@media (max-width: 576px) {
-    .navbar-brand .logo {
-        width: 80px; /* Kurangi ukuran */
-        height: auto; /* Pastikan proporsi tetap */
-    }
-}
-         .fade-in {
+      /* Ukuran logo lebih kecil untuk layar mobile */
+      @media (max-width: 576px) {
+        .navbar-brand .logo {
+          width: 80px; /* Kurangi ukuran */
+          height: auto; /* Pastikan proporsi tetap */
+        }
+      }
+      .fade-in {
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 1s ease, transform 1s ease;
-    }
-    .fade-in.visible {
+      }
+      .fade-in.visible {
         opacity: 1;
         transform: translateY(0);
-    }
+      }
       .header {
         position: relative;
-        background-image: url("assets/section1.jpg");
+        background-image: url("assets/ruang1.jpg");
         background-size: cover; /* Cover the entire area */
         background-position: center;
         min-height: 400px;
@@ -102,498 +107,845 @@ body {
         }
       }
 
-.card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 12px;
-            border: none;
-            padding: 20px;
-        }
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 12px;
+        border: none;
+        padding: 20px;
+      }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-        }
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      }
 
-        .card-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #198700;
-        }
+      .card-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #198700;
+      }
 
-        .card-text {
-            font-size: 1rem;
-            color: #555555;
-        } 
-      
+      .card-text {
+        font-size: 1rem;
+        color: #555555;
+      }
+
       /* Google Maps */
-.google-maps iframe {
-    max-width: 100%;
-    height: auto;
-    border: none;
-}
-
+      .google-maps iframe {
+        max-width: 100%;
+        height: auto;
+        border: none;
+      }
     </style>
   </head>
   <body>
     <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg  navbar-light">
-  <div class="container-fluid">
-    <a class="navbar-brand text-black fw-bold" href="index.html">
-      <img
-        src="assets/logo-alhadi.png"
-        alt="Logo"
-        width="110"
-        height="40"
-        class="d-inline-block align-text-top"
-      />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item px-3">
-          <a class="nav-link text-black fw-semibold" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link text-black fw-semibold" href="location.html">Location</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link active text-black fw-semibold" href="about.html">About Us</a>
-        </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- Navbar End -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand text-black fw-bold" href="index.html">
+          <img
+            src="assets/logo-alhadi.png"
+            alt="Logo"
+            width="110"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item px-3">
+              <a
+                class="nav-link text-black fw-semibold"
+                aria-current="page"
+                href="index.html"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link text-black fw-semibold" href="location.html"
+                >Lokasi</a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a
+                class="nav-link active text-black fw-semibold"
+                href="about.html"
+                >Tentang Kami</a
+              >
+            </li>
+            <li class="nav-item dropdown px-3">
+              <a
+                class="nav-link dropdown-toggle text-black fw-semibold"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Fasilitas
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a
+                  class="nav-link dropdown-item text-black fw-semibold"
+                  href="building.html"
+                  >Gedung</a
+                >
+                <a
+                  class="nav-link dropdown-item text-black fw-semibold"
+                  href="menu.html"
+                  >Menu Makanan</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
 
     <!-- Header Start -->
     <div class="header">
       <div class="header-content">
-        <h3 class="display-0 text-white ">Tentang Kami</h3>
+        <h3 class="display-0 text-white">Tentang Kami</h3>
         <div class="breadcrumb text-white">
           <p class="m-0">
-            <a class="text-white text-decoration-none" href="#">Home</a>
+            <a class="text-white text-decoration-none" href="index.html"
+              >Beranda</a
+            >
           </p>
           <p class="m-0 px-2">/</p>
-          <p class="m-0">About Us</p>
+          <div class="breadcrumb text-white">
+            <p class="m-0">
+              <a class="text-white text-decoration-none" href="#"
+                >Tentang Kami</a
+              >
+            </p>
+          </div>
         </div>
-      </div>
       </div>
     </div>
     <!-- Header End -->
 
     <!-- Card Start -->
-    <div class="container-xxl py-5 ">
+    <div class="container-xxl py-5">
       <div class="container">
-          <div class="bg-light rounded shadow-lg fade-in">
-              <div class="row g-0">
-                  <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 410px;">
-                      <div class="position-relative h-100">
-                          <img class="position-absolute w-100 h-100 rounded fade-in" src="assets/alhadi-slide1.png" style="object-fit: cover;">
-                      </div>
-                  </div>
-                  <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                      <div class="h-100 d-flex flex-column justify-content-center p-5 fade-in">
-                          <h1 class="mb-4 fade-in">Al Hadi Daycare</h1>
-                          <p class="mb-4 fade-in" style="text-align: justify;">Al Hadi Daycare hadir sebagai support system bagi orang tua bekerja, menyediakan layanan penitipan anak yang aman dan terpercaya. Kami juga menawarkan pendidikan yang komprehensif untuk mendukung tumbuh kembang anak-anak. Sebagai Tempat Penitipan Anak, Al Hadi Daycare berfungsi sebagai keluarga sementara bagi anak-anak yang orang tuanya tidak memiliki cukup waktu untuk memberikan kebutuhan dasar mereka. 
-                          </p>
-                          <a class="btn btn-outline-success py-3 px-5 fade-in" href="https://docs.google.com/forms/d/e/1FAIpQLSfyEcXtk2M0fZm_b5p0JuXb12-C3tTBGvm4wecWkATuWrUySQ/viewform?usp=sf_link" target="_blank">Daftar Sekarang<i class="fa fa-arrow-right ms-2"></i></a>
-                      </div>
-                  </div>
+        <div class="bg-light rounded shadow-lg fade-in">
+          <div class="row g-0">
+            <div
+              class="col-lg-6 wow fadeIn"
+              data-wow-delay="0.5s"
+              style="min-height: 410px"
+            >
+              <div class="position-relative h-100">
+                <img
+                  class="position-absolute w-100 h-100 rounded fade-in"
+                  src="assets/alhadi-slide1.png"
+                  style="object-fit: cover"
+                />
               </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <div
+                class="h-100 d-flex flex-column justify-content-center p-5 fade-in"
+              >
+                <h1 class="mb-4 fade-in">Al Hadi Daycare</h1>
+                <p class="mb-4 fade-in" style="text-align: justify">
+                  Al Hadi Daycare hadir sebagai support system bagi orang tua
+                  bekerja, menyediakan layanan penitipan anak yang aman dan
+                  terpercaya. Kami juga menawarkan pendidikan yang komprehensif
+                  untuk mendukung tumbuh kembang anak-anak. Sebagai Tempat
+                  Penitipan Anak, Al Hadi Daycare berfungsi sebagai keluarga
+                  sementara bagi anak-anak yang orang tuanya tidak memiliki
+                  cukup waktu untuk memberikan kebutuhan dasar mereka.
+                </p>
+                <a
+                  class="btn btn-outline-success py-3 px-5 fade-in"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfyEcXtk2M0fZm_b5p0JuXb12-C3tTBGvm4wecWkATuWrUySQ/viewform?usp=sf_link"
+                  target="_blank"
+                  >Daftar Sekarang<i class="fa fa-arrow-right ms-2"></i
+                ></a>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
+    </div>
     <!-- Card End -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill=" #e4f8e4" fill-opacity="1" d="M0,128L48,128C96,128,192,128,288,149.3C384,171,480,213,576,234.7C672,256,768,256,864,245.3C960,235,1056,213,1152,197.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill=" #e4f8e4"
+        fill-opacity="1"
+        d="M0,128L48,128C96,128,192,128,288,149.3C384,171,480,213,576,234.7C672,256,768,256,864,245.3C960,235,1056,213,1152,197.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+      ></path>
+    </svg>
 
-<!-- Visi Misi Start -->
-<section id="scroll" style="background-color: #e4f8e4;">
-  <div class="container py-5" >
-    <div class="row" >
-        <div class="col-md-4 fade-in" >
+    <!-- Visi Misi Start -->
+    <section id="scroll" style="background-color: #e4f8e4">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-4 fade-in">
             <div class="card text-center fade-in">
-                <h5 class="card-title text-primary fade-in">Visi</h5>
-                <p class="card-text fade-in">Menjadi mitra orang tua dalam menyiapkan generasi yang beriman, bertakwa, berbudi pekerti luhur, santun dan unggul 
-                  pada masa golden Age.</p>
+              <h5 class="card-title text-primary fade-in">Visi</h5>
+              <p class="card-text fade-in">
+                "Menyiapkan generasi yang beriman dan bertaqwa, berakhlakul
+                karimah, berbudi pekerti, prima dalam kualitas, unggul dalam
+                prestasi dan santun dalam berbudaya."
+              </p>
             </div>
-        </div>
+          </div>
 
-        <div class="col-md-4 fade-in">
+          <div class="col-md-4 fade-in">
             <div class="card text-center fade-in">
-                <h5 class="card-title fade-in">Misi</h5>
-                <p class="card-text fade-in">1.Pelayanan dan pengasuhan anak-anak di masa golden age.</p>
-                <p class="card-text fade-in">2.Menjaga tumbuh kembang anak sesuai dengan tahapannya.</p>
-                <p class="card-text fade-in">3.Pola pengasuhan Islami</p>
+              <h5 class="card-title fade-in">Misi</h5>
+              <p class="card-text fade-in">
+                1. Mewujudkan pembelajaran efektif yang dapat menciptakan
+                keseimbagan antara kemampuan intelektual (IQ) dan kematangan
+                emosional (EQ), dan peningkat iman dan taqwa(SQ).
+              </p>
+              <p class="card-text fade-in">
+                2. Menerapkan PAIKEM (Pembelajaran yang Aktif, Inovatif,
+                Kreatif, Efektif, dan Menyenangkan).
+              </p>
+              <p class="card-text fade-in">
+                3. Mewujudkan lingkungan sekolah yang nyaman (Green School)
+                dengan menciptakan 7K (Keamanan, Kebersihan, Keindahan,
+                Kekeluargaan, dan Kesehatan)
+              </p>
+              <p class="card-text fade-in">
+                4. Meletakkan dasar-dasar yang kuat bagi anak didik akan
+                kemandirian, pengenalan terhadap kebudayaan dan peradaban serta
+                memupuk jiwa kompetitif dengan orang lain
+              </p>
             </div>
-        </div>
+          </div>
 
-        <div class="col-md-4 fade-in">
+          <div class="col-md-4 fade-in">
             <div class="card text-center fade-in">
-                <h5 class="card-title text-danger fade-in">Semboyan</h5>
-                <p class="card-text fade-in">“Membina Insan Cerdas dan Berakhlakul Karimah”</p>
+              <h5 class="card-title text-danger fade-in">Tujuan</h5>
+              <p class="card-text fade-in">
+                1. Membentuk manusia yang beriman dan bertaqwa kepada Tuhan Yang
+                Maha Esa.
+              </p>
+              <p class="card-text fade-in">
+                2. Menumbuhkan kepribadian yang mampu berkompetensi secara
+                global
+              </p>
+              <p class="card-text fade-in">
+                3. Menumbuhkan kepribadian yang berwawasan kebangsaan yang luar
+              </p>
+              <p class="card-text fade-in">
+                4. Menyiapkan anak untuk memasuki jenjang pendidikan dasar
+              </p>
             </div>
-        </div>
-    </div>
-  </div>
-<!-- Visi Misi End -->
-
-<!-- Owner Profile Start -->
-<section id="owner-profile" class="container py-5" style="background-color: #e4f8e4;">
-  <h2 class="text-black text-center fw-bold m-5 fade-in">Owner Profile</h2>
-  <div class="row justify-content-center">
-    <div class="col-lg-8">
-      <div class="card shadow-lg border-0 rounded-3">
-        <div class="card-body p-4 fade-in">
-          <div class="text-center mb-4 fade-in">
-            <img src="assets/owner alhadi.png" alt="Hj. Anifah Qowiyatun" class="rounded-circle img-fluid" width="150">
-          </div>
-          <h2 class="text-center text-primary fade-in">Hj. Anifah Qowiyatun, S.Sos.I</h2>
-          <h5 class="text-center text-muted fade-in">Pendiri & Direktur Pendidikan Yayasan AL Hadi Taman Aries</h5>
-          <p class="mt-3 text-justify fade-in">
-            Saya Hj. Anifah Qowiyatun, S.Sos.I saat ini sebagai pendiri sekaligus direktur pendidikan Yayasan AL Hadi Taman Aries (Daycare, Preschool, Bimbel, dan Tahfidz). Saya merupakan lulusan Fakultas Dakwah Universitas Muhammadiyah Jakarta. Saat Yayasan Al Hadi didirikan, saya memutuskan menjadi Ketua Yayasan agar ilmu dakwah yang saya dapatkan tidak sia-sia. Seiring berjalannya waktu, saya memfokuskan diri menjadi direktur pendidikan, dan posisi ketua yayasan digantikan oleh suami saya, Bapak H Saiful Hadi, S.H.I.
-          </p>
-          <p class="text-justify fade-in">
-            Pendidikan formal saya tempuh di Ponpes Subulussalam Banten MTS NU Banat Kudus, kemudian melanjutkan ke Ma’had Dzin Nurain Jakarta (Bahasa Arab) dan meraih S1 di Universitas Muhammadiyah Jakarta dalam bidang Komunikasi Penyiaran Islam Konsentrasi Haji dan Umroh.
-          </p>
-          <h5 class="text-primary fade-in">Pengalaman Mengajar:</h5>
-          <ul class="fade-in">
-            <li>2006 - Guru di RA Nurul Huda</li>
-            <li>2007 - Guru di TPA Al Hikmah</li>
-            <li>2010 - Guru di SDIT ABATA</li>
-            <li>2012 - Guru di MIT An-Nahl</li>
-          </ul>
-          <p class="text-justify fade-in">
-            Dengan pengalaman mengajar dari TK hingga SD serta waktu yang cukup lama di dunia pendidikan, saya memiliki tekad kuat untuk mendirikan Al Hadi Daycare. Selain itu, sejak kuliah saya aktif dalam berbagai kegiatan pendidikan yang semakin mendorong kepedulian terhadap tumbuh kembang anak.
-          </p>
-          <p class="text-justify fade-in">
-            Berdasarkan tes TalentDNA yang saya lakukan secara online, saya memiliki 10 Top Talent yang mendukung saya dalam membangun Al Hadi Daycare. Dengan bekal pengalaman dan karakter yang saya miliki, saya berkomitmen untuk terus mengembangkan pendidikan anak usia dini yang berkualitas.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Owner Profile End -->
-
-<!-- Jenis Daycare Start -->
-<div class="container p-5">
-  <h2 class="text-center mb-4 fade-in">Jenis Daycare</h2>
-  <div class="row justify-content-center fade-in">
-    <!-- Card 1 -->
-    <div class="col-lg-6 col-md-12 mb-4">
-      <div class="card h-100 shadow-lg">
-        <div class="card-body">
-          <div class="text-center p-3">
-            <h5 class="card-title fade-in">PAKET HEMAT</h5>
-            <small class="fade-in">Daycare</small>
-          </div>
-          <p class="card-text fade-in">Tempat ini menyediakan sarana yang aman dan terawasi untuk anak-anak selama jam kerja orang tua mereka, atau ketika orang tua tidak dapat menemani mereka, hal ini juga mencakup pengawasan langsung dan perawatan dasar seperti mengganti popok dan membantu anak makan.</p>
-          <ul class="list-group list-group-flush fade-in">
-            <li class="list-group-item fade-in"><i class="fa-solid fa-check fade-in"></i> Tempat Penitipan Anak</li>
-            <li class="list-group-item fade-in"><i class="fa-solid fa-check fade-in"></i> Menyediakan Makanan Bernutrisi</li>
-          </ul>
-        </div>
-        <!-- Tombol dengan center -->
-        <div class="text-center">
-          <a class="btn btn-success btn-sm fade-in" href="https://docs.google.com/forms/d/e/1FAIpQLSfyEcXtk2M0fZm_b5p0JuXb12-C3tTBGvm4wecWkATuWrUySQ/viewform?usp=sf_link" target="_blank">Daftar Sekarang →</a>
-        </div>
-      </div>
-    </div>
-    <!-- Card 2 -->
-    <div class="col-lg-6 col-md-12 mb-4">
-      <div class="card h-100 shadow-lg">
-        <div class="card-body">
-          <div class="text-center p-3">
-            <h5 class="card-title fade-in">PAKET KOMPLIT</h5>
-            <small class="fade-in">Daycare</small>
-          </div>
-          <p class="card-text fade-in">Tempat ini adalah penambahan fasilitas yang ada di PAKET HEMAT hanya ditambah dengan berbagai kegiatan yang mendukung perkembangan anak, termasuk menyediakan fasilitas dan arena bermain untuk anak, sehingga tempatnya bisa dipadukan sebagai sarana pendidikan untuk bermain, belajar, dan berinteraksi dengan teman sebaya.</p>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item fade-in"><i class="fa-solid fa-check fade-in"></i> Tempat Penitipan Anak</li>
-            <li class="list-group-item fade-in"><i class="fa-solid fa-check fade-in"></i> Menyediakan Makanan Bernutrisi</li>
-            <li class="list-group-item fade-in"><i class="fa-solid fa-check fade-in"></i> Menyediakan Fasilitas Dan Arena Bermain</li>
-            <li class="list-group-item fade-in"><i class="fa-solid fa-check fade-in"></i> Memadukan Tempat Sebagai Sarana Pendidikan, Bermain, Belajar, Dan Berinteraksi Dengan Teman Sebaya</li>
-          </ul>
-        </div>
-        <!-- Tombol dengan center -->
-        <div class="text-center">
-          <a class="btn btn-success btn-sm fade-in" href="https://docs.google.com/forms/d/e/1FAIpQLSfyEcXtk2M0fZm_b5p0JuXb12-C3tTBGvm4wecWkATuWrUySQ/viewform?usp=sf_link" target="_blank">Daftar Sekarang →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Jenis Daycare End -->
-</section>
-
-
-
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill=" #e4f8e4" fill-opacity="1" d="M0,128L48,128C96,128,192,128,288,149.3C384,171,480,213,576,234.7C672,256,768,256,864,245.3C960,235,1056,213,1152,197.3C1248,181,1344,171,1392,165.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-
-<!-- Pola Pengasuhan Start -->
-<section class="py-5 py-xl-8">
-  <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-12 col-md-10 col-lg-8 col-xl-7">
-        <h3 class="fs-5 mb-2 text-secondary text-center text-uppercase fade-in">Services</h3>
-        <h2 class="mb-5 mb-xl-9 text-center fade-in">3 pola pengasuhan yang diterapkan, yaitu:</h2>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <!-- Card 1 -->
-      <div class="col-12 col-md-4 p-3">
-        <div class="card h-100 text-center p-4 bg-light border rounded shadow">
-          <div class="card-body fade-in">
-            <i class="fa-solid fa-mosque text-success mb-4 fade-in" style="font-size: 40px;"></i>
-            <h4 class="fw-bold text-uppercase mb-4 fade-in">Berbasis <br>Agama</h4>
-            <p class="mb-0 text-secondary fade-in" style="text-align: justify;">Diajarkan beribadah dan menghapal doa-doa.<br><br>Tujuannya agar anak taat dalam beragama dan diharapkan menjadi seorang yang berakhlak mulia dan berbudi pekerti tinggi.<br><br>Contohnya: anak dididik untuk ketaatannya dalam agama seperti diajarkan beribadah, membaca Al-Qur’an, dan menghafalkan berbagai do’a.</p>
           </div>
         </div>
       </div>
+      <!-- Visi Misi End -->
 
-      <!-- Card 2 -->
-      <div class="col-12 col-md-4 p-3">
-        <div class="card h-100 text-center p-4 bg-light border rounded shadow">
-          <div class="card-body fade-in">
-            <i class="fa-solid fa-graduation-cap text-black mb-4 fade-in" style="font-size: 40px;"></i>
-            <h4 class="fw-bold text-uppercase mb-4 fade-in">Berbasis Pendidikan</h4>
-            <p class="mb-0 text-secondary fade-in" style="text-align: justify;">Merangsang perkembangan kognitif, sosial, permainan edukatif, cerita, seni, dan juga musik.<br><br>Tujuannya agar anak lebih berkembang otak dan motoriknya.<br><br>Contohnya: merangsang perkembangan kognitif, sosial, permainan edukatif, cerita, seni, dan juga musik. Tujuannya agar anak lebih berkembang otak dan motoriknya.</p>
+      <!-- Owner Profile Start -->
+      <section
+        id="owner-profile"
+        class="container py-5"
+        style="background-color: #e4f8e4"
+      >
+        <h2 class="text-black text-center fw-bold m-5 fade-in">
+          Owner Profile
+        </h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card shadow-lg border-0 rounded-3">
+              <div class="card-body p-4 fade-in">
+                <div class="text-center mb-4 fade-in">
+                  <img
+                    src="assets/owner alhadi.png"
+                    alt="Hj. Anifah Qowiyatun"
+                    class="rounded-circle img-fluid"
+                    width="150"
+                  />
+                </div>
+                <h2 class="text-center text-primary fade-in">
+                  Hj. Anifah Qowiyatun, S.Sos.I
+                </h2>
+                <h5 class="text-center text-muted fade-in">
+                  Pendiri & Direktur Pendidikan Yayasan AL Hadi Taman Aries
+                </h5>
+                <p class="mt-3 text-justify fade-in">
+                  Saya Hj. Anifah Qowiyatun, S.Sos.I saat ini sebagai pendiri
+                  sekaligus direktur pendidikan Yayasan AL Hadi Taman Aries
+                  (Daycare, Preschool, Bimbel, dan Tahfidz). Saya merupakan
+                  lulusan Fakultas Dakwah Universitas Muhammadiyah Jakarta. Saat
+                  Yayasan Al Hadi didirikan, saya memutuskan menjadi Ketua
+                  Yayasan agar ilmu dakwah yang saya dapatkan tidak sia-sia.
+                  Seiring berjalannya waktu, saya memfokuskan diri menjadi
+                  direktur pendidikan, dan posisi ketua yayasan digantikan oleh
+                  suami saya, Bapak H Saiful Hadi, S.H.I.
+                </p>
+                <p class="text-justify fade-in">
+                  Pendidikan formal saya tempuh di Ponpes Subulussalam Banten
+                  MTS NU Banat Kudus, kemudian melanjutkan ke Ma’had Dzin Nurain
+                  Jakarta (Bahasa Arab) dan meraih S1 di Universitas
+                  Muhammadiyah Jakarta dalam bidang Komunikasi Penyiaran Islam
+                  Konsentrasi Haji dan Umroh.
+                </p>
+                <h5 class="text-primary fade-in">Pengalaman Mengajar:</h5>
+                <ul class="fade-in">
+                  <li>2006 - Guru di RA Nurul Huda</li>
+                  <li>2007 - Guru di TPA Al Hikmah</li>
+                  <li>2010 - Guru di SDIT ABATA</li>
+                  <li>2012 - Guru di MIT An-Nahl</li>
+                </ul>
+                <p class="text-justify fade-in">
+                  Dengan pengalaman mengajar dari TK hingga SD serta waktu yang
+                  cukup lama di dunia pendidikan, saya memiliki tekad kuat untuk
+                  mendirikan Al Hadi Daycare. Selain itu, sejak kuliah saya
+                  aktif dalam berbagai kegiatan pendidikan yang semakin
+                  mendorong kepedulian terhadap tumbuh kembang anak.
+                </p>
+                <p class="text-justify fade-in">
+                  Berdasarkan tes TalentDNA yang saya lakukan secara online,
+                  saya memiliki 10 Top Talent yang mendukung saya dalam
+                  membangun Al Hadi Daycare. Dengan bekal pengalaman dan
+                  karakter yang saya miliki, saya berkomitmen untuk terus
+                  mengembangkan pendidikan anak usia dini yang berkualitas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Owner Profile End -->
+
+      <!-- Jenis Daycare Start -->
+      <div class="container p-5">
+        <h2 class="text-center mb-4 fade-in">Jenis Daycare</h2>
+        <div class="row justify-content-center fade-in">
+          <!-- Card 1 -->
+          <div class="col-lg-6 col-md-12 mb-4">
+            <div class="card h-100 shadow-lg">
+              <div class="card-body">
+                <div class="text-center p-3">
+                  <h5 class="card-title fade-in">PAKET HEMAT</h5>
+                  <small class="fade-in">Daycare</small>
+                </div>
+                <p class="card-text fade-in">
+                  Tempat ini menyediakan sarana yang aman dan terawasi untuk
+                  anak-anak selama jam kerja orang tua mereka, atau ketika orang
+                  tua tidak dapat menemani mereka, hal ini juga mencakup
+                  pengawasan langsung dan perawatan dasar seperti mengganti
+                  popok dan membantu anak makan.
+                </p>
+                <ul class="list-group list-group-flush fade-in">
+                  <li class="list-group-item fade-in">
+                    <i class="fa-solid fa-check fade-in"></i> Tempat Penitipan
+                    Anak
+                  </li>
+                  <li class="list-group-item fade-in">
+                    <i class="fa-solid fa-check fade-in"></i> Menyediakan
+                    Makanan Bernutrisi
+                  </li>
+                </ul>
+              </div>
+              <!-- Tombol dengan center -->
+              <div class="text-center">
+                <a
+                  class="btn btn-success btn-sm fade-in"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfyEcXtk2M0fZm_b5p0JuXb12-C3tTBGvm4wecWkATuWrUySQ/viewform?usp=sf_link"
+                  target="_blank"
+                  >Daftar Sekarang →</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-lg-6 col-md-12 mb-4">
+            <div class="card h-100 shadow-lg">
+              <div class="card-body">
+                <div class="text-center p-3">
+                  <h5 class="card-title fade-in">PAKET KOMPLIT</h5>
+                  <small class="fade-in">Daycare</small>
+                </div>
+                <p class="card-text fade-in">
+                  Tempat ini adalah penambahan fasilitas yang ada di PAKET HEMAT
+                  hanya ditambah dengan berbagai kegiatan yang mendukung
+                  perkembangan anak, termasuk menyediakan fasilitas dan arena
+                  bermain untuk anak, sehingga tempatnya bisa dipadukan sebagai
+                  sarana pendidikan untuk bermain, belajar, dan berinteraksi
+                  dengan teman sebaya.
+                </p>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item fade-in">
+                    <i class="fa-solid fa-check fade-in"></i> Tempat Penitipan
+                    Anak
+                  </li>
+                  <li class="list-group-item fade-in">
+                    <i class="fa-solid fa-check fade-in"></i> Menyediakan
+                    Makanan Bernutrisi
+                  </li>
+                  <li class="list-group-item fade-in">
+                    <i class="fa-solid fa-check fade-in"></i> Menyediakan
+                    Fasilitas Dan Arena Bermain
+                  </li>
+                  <li class="list-group-item fade-in">
+                    <i class="fa-solid fa-check fade-in"></i> Memadukan Tempat
+                    Sebagai Sarana Pendidikan, Bermain, Belajar, Dan
+                    Berinteraksi Dengan Teman Sebaya
+                  </li>
+                </ul>
+              </div>
+              <!-- Tombol dengan center -->
+              <div class="text-center">
+                <a
+                  class="btn btn-success btn-sm fade-in"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfyEcXtk2M0fZm_b5p0JuXb12-C3tTBGvm4wecWkATuWrUySQ/viewform?usp=sf_link"
+                  target="_blank"
+                  >Daftar Sekarang →</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Card 3 -->
-      <div class="col-12 col-md-4 p-3">
-        <div class="card h-100 text-center p-4 bg-light border rounded shadow">
-          <div class="card-body fade-in">
-            <i class="fa-solid fa-brain text-danger mb-4 fade-in" style="font-size: 40px;"></i>
-            <h4 class="fw-bold text-uppercase mb-4 fade-in">Berbasis Montessori</h4>
-            <p class="mb-0 text-secondary fade-in" style="text-align: justify;">Metode ini salah satu gaya pengasuhan yang paling populer, didasari pada prinsip-prinsip ilmiah.<br><br>Tujuannya untuk membantu anak mencari pengetahuan dan mempelajari keterampilan baru agar dapat memuaskan rasa ingin tahu mereka.<br><br>Contohnya: Anak-anak diberikan kesempatan untuk menjelajah dengan bebas, memecahkan masalah, membuat penemuan, mengalami hal-hal baru, dan menantang diri mereka sendiri.</p>
+      <!-- Jenis Daycare End -->
+    </section>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill=" #e4f8e4"
+        fill-opacity="1"
+        d="M0,128L48,128C96,128,192,128,288,149.3C384,171,480,213,576,234.7C672,256,768,256,864,245.3C960,235,1056,213,1152,197.3C1248,181,1344,171,1392,165.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+      ></path>
+    </svg>
+
+    <!-- Pola Pengasuhan Start -->
+    <section class="py-5 py-xl-8">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+            <h3
+              class="fs-5 mb-2 text-secondary text-center text-uppercase fade-in"
+            >
+              Pola Pengasuhan
+            </h3>
+            <h2 class="mb-5 mb-xl-9 text-center fade-in">
+              3 pola pengasuhan yang diterapkan, yaitu:
+            </h2>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
+      <div class="container">
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-4 p-3">
+            <div
+              class="card h-100 text-center p-4 bg-light border rounded shadow"
+            >
+              <div class="card-body fade-in">
+                <i
+                  class="fa-solid fa-mosque text-success mb-4 fade-in"
+                  style="font-size: 40px"
+                ></i>
+                <h4 class="fw-bold text-uppercase mb-4 fade-in">
+                  Berbasis <br />Agama
+                </h4>
+                <p
+                  class="mb-0 text-secondary fade-in"
+                  style="text-align: justify"
+                >
+                  Diajarkan beribadah dan menghapal doa-doa.<br /><br />Tujuannya
+                  agar anak taat dalam beragama dan diharapkan menjadi seorang
+                  yang berakhlak mulia dan berbudi pekerti tinggi.<br /><br />Contohnya:
+                  anak dididik untuk ketaatannya dalam agama seperti diajarkan
+                  beribadah, membaca Al-Qur’an, dan menghafalkan berbagai do’a.
+                </p>
+              </div>
+            </div>
+          </div>
 
-<!-- Pola Pengasuhan End -->
+          <!-- Card 2 -->
+          <div class="col-12 col-md-4 p-3">
+            <div
+              class="card h-100 text-center p-4 bg-light border rounded shadow"
+            >
+              <div class="card-body fade-in">
+                <i
+                  class="fa-solid fa-graduation-cap text-black mb-4 fade-in"
+                  style="font-size: 40px"
+                ></i>
+                <h4 class="fw-bold text-uppercase mb-4 fade-in">
+                  Berbasis Pendidikan
+                </h4>
+                <p
+                  class="mb-0 text-secondary fade-in"
+                  style="text-align: justify"
+                >
+                  Merangsang perkembangan kognitif, sosial, permainan edukatif,
+                  cerita, seni, dan juga musik.<br /><br />Tujuannya agar anak
+                  lebih berkembang otak dan motoriknya.<br /><br />Contohnya:
+                  merangsang perkembangan kognitif, sosial, permainan edukatif,
+                  cerita, seni, dan juga musik. Tujuannya agar anak lebih
+                  berkembang otak dan motoriknya.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <!-- Testimonial Start -->
-  <div class="testimonial-container m-5">
-    <div class="text-center pb-2 fade-in">
-      <p class="section-title px-5"><span class="px-2">Testimoni</span></p>
-      <h1 class="mb-4">Berbagi Pengalaman</h1>
-  </div>
-    <div id="testimonial" class="carousel slide testimonial-carousel" data-bs-ride="carousel">
-      <div class="carousel-inner">
+          <!-- Card 3 -->
+          <div class="col-12 col-md-4 p-3">
+            <div
+              class="card h-100 text-center p-4 bg-light border rounded shadow"
+            >
+              <div class="card-body fade-in">
+                <i
+                  class="fa-solid fa-brain text-danger mb-4 fade-in"
+                  style="font-size: 40px"
+                ></i>
+                <h4 class="fw-bold text-uppercase mb-4 fade-in">
+                  Berbasis Montessori
+                </h4>
+                <p
+                  class="mb-0 text-secondary fade-in"
+                  style="text-align: justify"
+                >
+                  Metode ini salah satu gaya pengasuhan yang paling populer,
+                  didasari pada prinsip-prinsip ilmiah.<br /><br />Tujuannya
+                  untuk membantu anak mencari pengetahuan dan mempelajari
+                  keterampilan baru agar dapat memuaskan rasa ingin tahu
+                  mereka.<br /><br />Contohnya: Anak-anak diberikan kesempatan
+                  untuk menjelajah dengan bebas, memecahkan masalah, membuat
+                  penemuan, mengalami hal-hal baru, dan menantang diri mereka
+                  sendiri.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pola Pengasuhan End -->
+
+    <!-- Testimonial Start -->
+    <div class="testimonial-container m-5">
+      <div class="text-center pb-2 fade-in">
+        <p class="section-title px-5"><span class="px-2">Testimoni</span></p>
+        <h1 class="mb-4">Berbagi Pengalaman</h1>
+      </div>
+      <div
+        id="testimonial"
+        class="carousel slide testimonial-carousel"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
           <!-- Testimonial 1 -->
           <div class="carousel-item active">
-              <div class="row text-center">
-                  <div class="col-lg-8 mx-auto">
-                      <img src="assets/userprofile.png" class="rounded-circle mb-4 fade-in" alt="User 1" style="width: 100px; height: 100px; object-fit: cover;">
-                      <h5 class="fade-in">Alifa Irlinda</h5>
-                      <p class="text-muted fade-in">"Daycare luar biasa dengan miss-miss super sabar dan penyayang. Tidak hanya menjaga anak-anak, daycare ini juga membekali anak-anak dengan banyak keterampilan dan pengetahuan. Fondasi Islami yang kuat membentuk anak jadi pribadi yang dekat dengan agama. Highly recommended."</p>
-                  </div>
+            <div class="row text-center">
+              <div class="col-lg-8 mx-auto">
+                <img
+                  src="assets/userprofile.png"
+                  class="rounded-circle mb-4 fade-in"
+                  alt="User 1"
+                  style="width: 100px; height: 100px; object-fit: cover"
+                />
+                <h5 class="fade-in">Alifa Irlinda</h5>
+                <p class="text-muted fade-in">
+                  "Daycare luar biasa dengan miss-miss super sabar dan
+                  penyayang. Tidak hanya menjaga anak-anak, daycare ini juga
+                  membekali anak-anak dengan banyak keterampilan dan
+                  pengetahuan. Fondasi Islami yang kuat membentuk anak jadi
+                  pribadi yang dekat dengan agama. Highly recommended."
+                </p>
               </div>
+            </div>
           </div>
           <!-- Testimonial 2 -->
           <div class="carousel-item">
-              <div class="row text-center">
-                  <div class="col-lg-8 mx-auto">
-                      <img src="assets/userprofile.png" class="rounded-circle mb-4 fade-in" alt="User 2" style="width: 100px; height: 100px; object-fit: cover;">
-                      <h5 class="fade-in">Sarah F. Hapsari</h5>
-                      <p class="text-muted fade-in">"Daycare yg profesional karena ownernya passion sekali di dunia anak2 dan pendidikan. Selain itu growth mindset banget tim2nya, kalau ada feedback dari wali murid ditanggapi dengan baik.
-                          Oya disini ada pre school dan tahfiz, jadi one stop education buat orang tua2 yang mencari basic pendidikan agama islam utk putra putrinya, sukses terus ya Al Hadi !"</p>
-                  </div>
+            <div class="row text-center">
+              <div class="col-lg-8 mx-auto">
+                <img
+                  src="assets/userprofile.png"
+                  class="rounded-circle mb-4 fade-in"
+                  alt="User 2"
+                  style="width: 100px; height: 100px; object-fit: cover"
+                />
+                <h5 class="fade-in">Sarah F. Hapsari</h5>
+                <p class="text-muted fade-in">
+                  "Daycare yg profesional karena ownernya passion sekali di
+                  dunia anak2 dan pendidikan. Selain itu growth mindset banget
+                  tim2nya, kalau ada feedback dari wali murid ditanggapi dengan
+                  baik. Oya disini ada pre school dan tahfiz, jadi one stop
+                  education buat orang tua2 yang mencari basic pendidikan agama
+                  islam utk putra putrinya, sukses terus ya Al Hadi !"
+                </p>
               </div>
+            </div>
           </div>
           <!-- Testimonial 3 -->
           <div class="carousel-item">
-              <div class="row text-center">
-                  <div class="col-lg-8 mx-auto">
-                      <img src="assets/userprofile.png" class="rounded-circle mb-4 fade-in" alt="User 3" style="width: 100px; height: 100px; object-fit: cover;">
-                      <h5 class="fade-in">Putri Wardhani</h5>
-                      <p class="text-muted fade-in">"Daycare amanah dan edukatif daerah jakarta barat dengan miss-miss yang care dan penyayang. Fasilitas lengkap dan ditunjang dengan program stimulasi motorik, sensorik, linguistik dan agam utk anak sesuai dengan usia"</p>
-                  </div>
+            <div class="row text-center">
+              <div class="col-lg-8 mx-auto">
+                <img
+                  src="assets/userprofile.png"
+                  class="rounded-circle mb-4 fade-in"
+                  alt="User 3"
+                  style="width: 100px; height: 100px; object-fit: cover"
+                />
+                <h5 class="fade-in">Putri Wardhani</h5>
+                <p class="text-muted fade-in">
+                  "Daycare amanah dan edukatif daerah jakarta barat dengan
+                  miss-miss yang care dan penyayang. Fasilitas lengkap dan
+                  ditunjang dengan program stimulasi motorik, sensorik,
+                  linguistik dan agam utk anak sesuai dengan usia"
+                </p>
               </div>
+            </div>
           </div>
-      </div>
-      <!-- Custom Controls -->
-      <button class="carousel-control-prev testimonial-control" type="button" data-bs-target="#testimonial" data-bs-slide="prev">
+        </div>
+        <!-- Custom Controls -->
+        <button
+          class="carousel-control-prev testimonial-control"
+          type="button"
+          data-bs-target="#testimonial"
+          data-bs-slide="prev"
+        >
           <span class="testimonial-control-icon">
-              <i class="fa fa-chevron-left fade-in"></i>
+            <i class="fa fa-chevron-left fade-in"></i>
           </span>
           <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next testimonial-control" type="button" data-bs-target="#testimonial" data-bs-slide="next">
+        </button>
+        <button
+          class="carousel-control-next testimonial-control"
+          type="button"
+          data-bs-target="#testimonial"
+          data-bs-slide="next"
+        >
           <span class="testimonial-control-icon">
-              <i class="fa fa-chevron-right fade-in"></i>
+            <i class="fa fa-chevron-right fade-in"></i>
           </span>
           <span class="visually-hidden">Next</span>
-      </button>
-  </div>
-  </div>
-  <!-- Testimonial End -->
+        </button>
+      </div>
+    </div>
+    <!-- Testimonial End -->
 
-<!-- Back to Top -->
-<button
-type="button"
-class="btn btn-success btn-lg fade-in"
-id="btn-back-to-top"
->
-<i class="fas fa-arrow-up"></i>
-</button>
+    <!-- Back to Top -->
+    <button
+      type="button"
+      class="btn btn-success btn-lg fade-in"
+      id="btn-back-to-top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
-<!-- Floating Whatsapp -->
-<a href="https://api.whatsapp.com/send?phone=6285717996523&text=Assalamualaikum%20,%20saya%20ingin%20bertanya%20tentang%20al%20hadi%20daycare." class="float fade-in" target="_blank">
-    <i class="fa-brands fa-whatsapp my-float fade-in"></i>
+    <!-- Floating Whatsapp -->
+    <a
+      href="https://api.whatsapp.com/send?phone=6281289497397&text=Assalamualaikum%20,%20saya%20ingin%20bertanya%20tentang%20al%20hadi%20daycare."
+      class="float fade-in"
+      target="_blank"
+    >
+      <i class="fa-brands fa-whatsapp my-float fade-in"></i>
     </a>
 
-
-
-  <!-- Footer Start -->
-<footer class="text-center text-lg-start text-dark bg-light" style="margin-bottom: 0;">
-    <!-- Section: Social Media -->
-    <section class="d-flex justify-content-between p-4 text-dark" style="background-color: rgb(239, 239, 239);">
+    <!-- Footer Start -->
+    <footer
+      class="text-center text-lg-start text-dark bg-light"
+      style="margin-bottom: 0; padding-bottom: 0"
+    >
+      <!-- Section: Social Media -->
+      <section
+        class="d-flex justify-content-between p-4 text-dark"
+        style="background-color: rgb(239, 239, 239)"
+      >
         <!-- Left -->
         <div>
-            <span>Ikuti Kami Di Media Sosial:</span>
+          <span>Ikuti Kami Di Media Sosial:</span>
         </div>
         <!-- Right -->
         <div>
-            <a href="https://www.facebook.com/alhadidaycare/?locale=id_ID" target="_blank" class="text-dark me-4"><i class="fab fa-facebook-f"></i></a>
-            <a href="mailto:alhadidaycare2@gmail.com?subject=Permintaan Informasi&body=Halo, saya ingin tahu lebih lanjut tentang..." target="_blank" class="text-dark me-4"><i class="fa-regular fa-envelope"></i></a>
-            <a href="https://www.instagram.com/alhadi_daycare/" target="_blank" class="text-dark me-4"><i class="fa-brands fa-instagram"></i></a>
+          <a
+            href="https://www.facebook.com/alhadidaycare/?locale=id_ID"
+            target="_blank"
+            class="text-dark me-4"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/alhadidaycare/?locale=id_ID"
+            target="_blank"
+            class="text-dark me-4"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="mailto:alhadidaycare2@gmail.com?subject=Permintaan Informasi&body=Halo, saya ingin tahu lebih lanjut tentang..."
+            target="_blank"
+            class="text-dark me-4"
+            ><i class="fa-regular fa-envelope"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/alhadi_daycare/"
+            target="_blank"
+            class="text-dark me-4"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
         </div>
-    </section>
-    <!-- Section: Social Media -->
+      </section>
+      <!-- Section: Social Media -->
 
-   <!-- Section: Links -->
-   <section class="py-5 bg-success text-light">
-       <div class="container">
-           <div class="row align-items-center">
-               <!-- Contact -->
-               <div class="col-md-4 text-md-start mb-4">
-                   <h6 class="text-uppercase fw-bold">Contact</h6>
-                   <div class="d-flex flex-column">
-                       <div class="d-flex align-items-center mb-2">
-                           <i class="fa fa-map-location-dot me-3"></i>
-                           <span style="text-align: left;">Jl. Tolo, RT.1/RW.8, Srengseng, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11630</span>
-                       </div>
-                       <div class="d-flex align-items-center mb-2">
-                           <i class="fas fa-envelope me-3"></i>
-                           <span>AlhadiDaycare2@gmail.com</span>
-                       </div>
-                       <div class="d-flex align-items-center mb-2">
-                           <i class="fas fa-brands fa-whatsapp me-3"></i>
-                           <span>+62 857-1799-6523</span>
-                       </div>
-                   </div>
-               </div>
-               <!-- Google Maps -->
-               <div class="col-md-4 text-center mb-4">
-                   <h6 class="text-uppercase fw-bold">Google Maps</h6>
-                   <div class="google-maps d-flex justify-content-center">
-                       <iframe 
-                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.471073912843!2d106.75208067355406!3d-6.201416660747306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7399d40ffdf%3A0x729e0a9790853132!2sDaycare%20Al%20Hadi%20school!5e0!3m2!1sid!2sid!4v1739101122470!5m2!1sid!2sid" 
-                           width="300" height="200" 
-                           style="border:0;" 
-                           allowfullscreen="" 
-                           loading="lazy" 
-                           referrerpolicy="no-referrer-when-downgrade">
-                       </iframe>
-                   </div>
-               </div>
-               <!-- Company Info -->
-               <div class="col-md-4 text-md-end mb-4 text-center">
-                   <h6 class="text-uppercase fw-bold">Tentang Al Hadi</h6>
-                   <p style="text-align: justify;">Pendidikan yang diberikan di Al Hadi Daycare memiliki pendekatan yang unik dalam mengajarkan nilai-nilai agama, akhlak, dan karakter kepada anak-anak. Sejak dini, anak-anak diajarkan pendidikan agama, seperti do'a harian, dan ditempatkan terpisah untuk anak laki-laki dan perempuan saat tidur siang. Selain itu, anak-anak juga dapat menggunakan fasilitas pendidikan tambahan seperti Tahfidz Al Qur'an Al Hadi.
-                </p>
-               </div>
-           </div>
-       </div>
-   </section>
-   <!-- Section: Links -->
+      <!-- Section: Links -->
+      <section class="py-5 bg-success text-light">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Contact -->
+            <div class="col-md-4 text-md-start mb-4">
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <div class="d-flex flex-column">
+                <div class="d-flex align-items-center mb-2">
+                  <i class="fa fa-map-location-dot me-3"></i>
+                  <span style="text-align: left"
+                    >Jl. Tolo, RT.1/RW.8, Srengseng, Kec. Kembangan, Kota
+                    Jakarta Barat, Daerah Khusus Ibukota Jakarta 11630</span
+                  >
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="fas fa-envelope me-3"></i>
+                  <span>alhadidaycare2@gmail.com</span>
+                </div>
+                <div class="d-flex flex-column mb-2">
+                  <div class="d-flex align-items-center">
+                    <i class="fas fa-brands fa-whatsapp me-3"></i>
+                    <span>+62 857-1799-6523</span>
+                  </div>
+                  <div class="d-flex align-items-center ms-4">
+                    <span class="me-2"></span>
+                    <span>+62 857-7256-1620</span>
+                  </div>
+                  <div class="d-flex align-items-center ms-4">
+                    <span class="me-2"></span>
+                    <span>+62 812-8949-7397</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Google Maps -->
+            <div class="col-md-4 text-center mb-4">
+              <h6 class="text-uppercase fw-bold">Google Maps</h6>
+              <div class="google-maps d-flex justify-content-center">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.471073912843!2d106.75208067355406!3d-6.201416660747306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7399d40ffdf%3A0x729e0a9790853132!2sDaycare%20Al%20Hadi%20school!5e0!3m2!1sid!2sid!4v1739101122470!5m2!1sid!2sid"
+                  width="300"
+                  height="200"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
+            <!-- Company Info -->
+            <div class="col-md-4 text-md-end mb-4 text-center">
+              <h6 class="text-uppercase fw-bold">Tentang Al Hadi</h6>
+              <p style="text-align: justify">
+                Pendidikan yang diberikan di Al Hadi Daycare memiliki pendekatan
+                yang unik dalam mengajarkan nilai-nilai agama, akhlak, dan
+                karakter kepada anak-anak. Sejak dini, anak-anak diajarkan
+                pendidikan agama, seperti do'a harian, dan ditempatkan terpisah
+                untuk anak laki-laki dan perempuan saat tidur siang. Selain itu,
+                anak-anak juga dapat menggunakan fasilitas pendidikan tambahan
+                seperti Tahfidz Al Qur'an Al Hadi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Links -->
 
-   <!-- Horizontal Divider -->
-   <hr class="m-0" style="border: 1px solid white; background-color: white; height: 1px; width: 100%;">
+      <!-- Horizontal Divider -->
+      <hr
+        class="m-0"
+        style="
+          border: 1px solid white;
+          background-color: white;
+          height: 1px;
+          width: 100%;
+        "
+      />
 
-   <!-- Copyright -->
-   <div class="text-center p-3 bg-success text-light">
-       © 2025 Copyright:
-       <a class="text-white" href="https://mdbootstrap.com/">Alhadi-daycare-preschooljkt.com</a>
-   </div>
-</footer>
-<!-- Footer End -->
-  
-<!-- Add JavaScript -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-      const cards = document.querySelectorAll(".fade-in");
+      <!-- Copyright -->
+      <div class="text-center p-3 bg-success text-light">
+        © 2025 Copyright:
+        <a class="text-white" href="index.html"
+          >Alhadi-daycare-preschooljkt.com</a
+        >
+      </div>
+    </footer>
+    <!-- Footer End -->
 
-      const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
+    <!-- Add JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
               if (entry.isIntersecting) {
-                  entry.target.classList.add("visible");
-                  observer.unobserve(entry.target);
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
               }
-          });
-      }, {
-          threshold: 0.1
-      });
+            });
+          },
+          {
+            threshold: 0.1,
+          }
+        );
 
-      cards.forEach(card => {
+        cards.forEach((card) => {
           observer.observe(card);
+        });
       });
-  });
 
-  //Get the button
-let mybutton = document.getElementById("btn-back-to-top");
+      //Get the button
+      let mybutton = document.getElementById("btn-back-to-top");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-scrollFunction();
-};
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
-function scrollFunction() {
-if (
-  document.body.scrollTop > 20 ||
-  document.documentElement.scrollTop > 20
-) {
-  mybutton.style.display = "block";
-} else {
-  mybutton.style.display = "none";
-}
-}
-// When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      // When the user clicks on the button, scroll to the top of the document
+      mybutton.addEventListener("click", backToTop);
 
-function backToTop() {
-document.body.scrollTop = 0;
-document.documentElement.scrollTop = 0;
-}
-</script>
+      function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
 
-
-  <script src="js/main.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>

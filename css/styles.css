@@ -67,11 +67,7 @@
   padding: 0.5rem 1rem; /* Sesuaikan jarak di sekitar logo */
 }
 .navbar .nav-link {
-  color: rgb(
-    4,
-    75,
-    41
-  ) !important; /* Mengubah warna teks navbar menjadi biru */
+  color: rgb(4, 75, 41) !important;
 }
 
 .navbar .nav-link:hover {
