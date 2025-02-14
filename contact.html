@@ -10,10 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Monday+Feelings&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="stylesheet" href="css/styles.css" />
     <style>
       /* Menghapus padding horizontal pada body */
@@ -150,6 +147,11 @@
               >
             </li>
             <li class="nav-item px-3">
+              <a class="nav-link text-black fw-semibold" href="join-us.html"
+                >Pendaftaran</a
+              >
+            </li>
+            <li class="nav-item px-3">
               <a class="nav-link text-black fw-semibold" href="location.html"
                 >Lokasi</a
               >
@@ -162,7 +164,7 @@
             <li class="nav-item px-3">
               <a
                 class="nav-link active text-black fw-semibold"
-                href="about.html"
+                href="contact.html"
                 >Kontak</a
               >
             </li>
@@ -217,6 +219,84 @@
       </div>
     </div>
     <!-- Header End -->
+
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+          <!-- Card Start -->
+          <div class="card shadow-lg border-0">
+            <div class="card-header bg-success text-white text-center">
+              <h4>Contact Us</h4>
+            </div>
+            <div class="card-body">
+              <!-- Form Start -->
+              <form method="post" action="" name="contact-form">
+                <div class="mb-3">
+                  <label for="name" class="form-label">
+                    <i class="fas fa-user me-2 text-success"></i> Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="number" class="form-label">
+                    <i class="fas fa-phone-alt me-2 text-success"></i> Phone
+                    Number
+                  </label>
+                  <input
+                    type="text"
+                    name="number"
+                    id="number"
+                    class="form-control"
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">
+                    <i class="fas fa-envelope me-2 text-success"></i> Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">
+                    <i class="fas fa-comment-alt me-2 text-success"></i> Message
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="5"
+                    class="form-control"
+                    placeholder="Enter your message"
+                    required
+                  ></textarea>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-success">
+                    <i class="fas fa-paper-plane me-2"></i> Submit
+                  </button>
+                </div>
+              </form>
+              <!-- Form End -->
+            </div>
+          </div>
+          <!-- Card End -->
+        </div>
+      </div>
+    </div>
 
     <!-- Back to Top -->
     <button
@@ -378,6 +458,21 @@
       <i class="fas fa-arrow-up"></i>
     </button>
     <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbx1r-aCHQ-ZdB23Nh9xpUPosao4Y7380HxA-6SLaiqMymK1X4QzRDerYMomtVaPrVC7Dw/exec";
+
+      const form = document.forms["contact-form"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => alert("Thank you! Form is submitted"))
+          .then(() => {
+            window.location.reload();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
       document.addEventListener("DOMContentLoaded", function () {
         const cards = document.querySelectorAll(".fade-in");
 
