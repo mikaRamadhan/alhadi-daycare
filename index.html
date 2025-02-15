@@ -1,150 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alhadi Daycare & PreSchool</title>
-    <link rel="icon" href="assets/logo-alhadi.png" type="image/png">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/logo-alhadi.png" type="image/png" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
     <style>
-       
-        /* Menghapus padding horizontal pada body */
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Mencegah scroll horizontal */
-}
+      /* Menghapus padding horizontal pada body */
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Mencegah scroll horizontal */
+      }
 
-/* Menghapus padding default pada container-fluid */
-.container-fluid {
-  padding-left: 0;
-  padding-right: 0;
-}
+      /* Menghapus padding default pada container-fluid */
+      .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+      }
 
-/* Atur ulang navbar untuk menempel ke sisi layar */
-.navbar {
-  margin: 0;
-  width: 100%;
-}
+      /* Atur ulang navbar untuk menempel ke sisi layar */
+      .navbar {
+        margin: 0;
+        width: 100%;
+      }
 
+      /* Ukuran default untuk layar besar */
+      .navbar-brand .logo {
+        width: 130px;
+        height: auto;
+        transition: all 0.3s ease;
+      }
 
-    /* Ukuran default untuk layar besar */
-.navbar-brand .logo {
-    width: 130px;
-    height: auto;
-    transition: all 0.3s ease;
-}
+      /* Ukuran logo lebih kecil untuk layar mobile */
+      @media (max-width: 576px) {
+        .navbar-brand .logo {
+          width: 80px; /* Kurangi ukuran */
+          height: auto; /* Pastikan proporsi tetap */
+        }
+      }
 
-/* Ukuran logo lebih kecil untuk layar mobile */
-@media (max-width: 576px) {
-    .navbar-brand .logo {
-        width: 80px; /* Kurangi ukuran */
-        height: auto; /* Pastikan proporsi tetap */
-    }
-}
-     /* Google Maps */
-.google-maps iframe {
-    max-width: 100%;
-    height: auto;
-    border: none;
-}
-footer {
-  margin: 0;
-  padding: 0;
-}
-        
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .header {
+        position: relative;
+        background-image: url("assets/ruang1.jpg");
+        background-size: cover; /* Cover the entire area */
+        background-position: center;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      .header-content {
+        position: absolute;
+        z-index: 2;
+        color: white;
+        margin-left: 100px;
+      }
+
+      .header-content h3 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .header-content .breadcrumb {
+        font-size: 1.1rem;
+      }
+
+      @media (max-width: 768px) {
+        .header-content h3 {
+          font-size: 2rem;
+        }
+        .header-content .breadcrumb {
+          font-size: 0.9rem;
+        }
+      }
+      /* Google Maps */
+      .google-maps iframe {
+        max-width: 100%;
+        height: auto;
+        border: none;
+      }
+      .dropdown-menu {
+        display: none; /* Default state */
+        position: absolute;
+        top: 100%; /* Posisi dropdown di bawah */
+        left: 0;
+        z-index: 1000;
+        float: left;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 0.125rem 0 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+      }
+
+      .navbar .dropdown:hover .dropdown-menu,
+      .navbar .dropdown .dropdown-menu.show {
+        display: block; /* Tampilkan saat di-hover atau saat toggle aktif */
+      }
+      /* Dropdown menu */
+      .dropdown-menu {
+        display: none; /* Default state */
+        position: absolute;
+        top: 100%; /* Posisi dropdown di bawah */
+        left: 0;
+        z-index: 1000;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 0.125rem 0 0;
+        font-size: 1rem;
+        background-color: #fff; /* Warna latar belakang */
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+      }
+
+      .navbar .dropdown:hover .dropdown-menu,
+      .navbar .dropdown .dropdown-menu.show {
+        display: block; /* Tampilkan dropdown saat hover atau toggle */
+      }
+
+      .dropdown-item {
+        color: rgb(4, 75, 41) !important; /* Warna item dropdown */
+      }
+
+      .dropdown-item:hover {
+        color: rgb(226, 129, 50) !important; /* Warna item saat hover */
+        background-color: rgba(
+          226,
+          129,
+          50,
+          0.1
+        ); /* Latar belakang ringan saat hover */
+      }
     </style>
-</head>
-
+  </head>
+  <body>
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <a class="navbar-brand text-black fw-bold" href="index.html">
-            <img
-              src="assets/logo-alhadi.png"
-              alt="Logo"
-              width="110"
-              height="40"
-              class="d-inline-block align-text-top"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item px-3">
-                <a
-                  class="nav-link active text-black fw-semibold"
-                  aria-current="page"
-                  href="index.html"
-                  >Beranda</a
-                >
-              </li>
-              <li class="nav-item px-3">
-                <a
-                  class="nav-link text-black fw-semibold"
-                  href="join-us.html"
-                  >Pendaftaran</a
-                >
-              </li>
-              <li class="nav-item px-3">
-                <a
-                  class="nav-link text-black fw-semibold"
-                  href="location.html"
-                  >Lokasi</a
-                >
-              </li>
-              <li class="nav-item px-3">
-                <a class="nav-link text-black fw-semibold" href="about.html"
-                  >Tentang Kami</a
-                >
-              </li>
-              <li class="nav-item px-3">
-                <a class="nav-link text-black fw-semibold" href="contact.html"
-                  >Kontak</a
-                >
-              </li>
-              <li class="nav-item dropdown px-3">
-                <a
-                  class="nav-link dropdown-toggle text-black fw-semibold"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Fasilitas
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <div class="container-fluid">
+        <a class="navbar-brand text-black fw-bold" href="index.html">
+          <img
+            src="assets/logo-alhadi.png"
+            alt="Logo"
+            width="110"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item px-3">
+              <a
+                class="nav-link active text-black fw-semibold"
+                aria-current="page"
+                href="index.html"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link text-black fw-semibold" href="join-us.html"
+                >Pendaftaran</a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link text-black fw-semibold" href="location.html"
+                >Lokasi</a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link text-black fw-semibold" href="about.html"
+                >Tentang Kami</a
+              >
+            </li>
+            <li class="nav-item px-3">
+              <a
+                class="nav-link text-black fw-semibold"
+                href="contact.html"
+                >Kontak</a
+              >
+            </li>
+            <li class="nav-item dropdown px-3">
+              <a
+                class="nav-link dropdown-toggle text-black fw-semibold"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Fasilitas
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
                   <a
-                    class="nav-link dropdown-item text-black fw-semibold"
+                    class="dropdown-item text-black fw-semibold"
                     href="building.html"
-                    >Gedung</a
                   >
+                    Gedung
+                  </a>
+                </li>
+                <li>
                   <a
-                    class="nav-link dropdown-item text-black fw-semibold"
+                    class="dropdown-item text-black fw-semibold"
                     href="menu.html"
-                    >Menu Makanan</a
                   >
-                </div>
-              </li>
-            </ul>
-          </div>
+                    Menu Makanan
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <!-- Navbar End -->
+      </div>
+    </nav>
+    <!-- Navbar End -->
  <!-- Carousel Start -->
 <div id="carouselExampleCaptions" class="carousel carousel-dark slide">
     <div class="carousel-indicators">
@@ -235,10 +348,127 @@ footer {
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyEcXtk2M0fZm_b5p0JuXb12-C3tTBGvm4wecWkATuWrUySQ/viewform?usp=sf_link" target="_blank"><button class="btn btn-lg btn-success px-5 mt-5 fade-in" style="box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 15px; overflow: hidden;">Daftar Sekarang</button></a>
     </div>
 </div>
+<!-- End Of Card -->
+<div class="container-fluid pt-5">
+    <div class="row">
+      <div class="col-12 pb-1">
+        <div class="d-flex bg-light shadow-sm border-top rounded mb-4 fade-in align-items-center justify-content-center" style="padding: 30px; width: 100%;">
+          <i class="fa-solid fa-book h1 mb-3 px-3"></i>
+          <div class="pl-4 text-center">
+            <h4>Pembelajaran Al-Qur’an Terstruktur dan Pengasuhan Optimal</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container fade-in text-center">
+    <h1 class="m-0 p-5">Dengan Metode Pembelajaran :</h1>
+  </div>
+  
+  <div class="container py-4">
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-6 mb-4 fade-in">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="assets/tahfidz.jpg"
+                alt="Tahfidz Al-Qur'an"
+                class="img-fluid rounded-start h-100"
+                style="object-fit: cover;"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title">Tahfidz Al-Qur'an</h3>
+                <p class="card-text">
+                  Program unggulan untuk membantu anak menghafal Al-Qur’an secara bertahap dengan pendampingan guru berpengalaman. Setiap anak akan didorong untuk mencapai target hafalan sesuai dengan kemampuan mereka.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-6 mb-4 fade-in">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="assets/talaqqi.jpg"
+                alt="Talaqqi"
+                class="img-fluid rounded-start h-100"
+                style="object-fit: cover;"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title">Talaqqi</h3>
+                <p class="card-text">
+                  Metode klasik yang sudah teruji dalam pembelajaran Al-Qur’an. Anak-anak akan mendengar bacaan guru sebanyak 10 kali, memastikan mereka memahami pelafalan yang benar dan tajwid yang tepat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-6 mb-4 fade-in">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="assets/smart-hafidz.jpg"
+                alt="Smart Hafidz/Earphone"
+                class="img-fluid rounded-start h-100"
+                style="object-fit: cover;"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title">Smart Hafidz/Earphone</h3>
+                <p class="card-text">
+                  Menggunakan teknologi modern untuk membantu anak mendengar ayat-ayat Al-Qur’an kapan saja, mempercepat proses hafalan mereka dengan fleksibilitas belajar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-md-6 mb-4 fade-in">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="assets/balita.jpg"
+                alt="Stimulasi dan Pengasuhan Bayi"
+                class="img-fluid rounded-start h-100"
+                style="object-fit: cover;"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title">Stimulasi dan Pengasuhan Optimal</h3>
+                <p class="card-text">
+                  Bayi mendapatkan perhatian penuh melalui program stimulasi perkembangan sensorik dan motorik untuk mendukung pertumbuhan optimal dalam lingkungan Islami.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  
 
  
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill=" #e4f8e4" fill-opacity="1" d="M0,128L48,128C96,128,192,128,288,149.3C384,171,480,213,576,234.7C672,256,768,256,864,245.3C960,235,1056,213,1152,197.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-<!-- End Of Card -->
+
+
 
 <!-- Section 1 -->
 
@@ -462,7 +692,7 @@ footer {
             <!-- Card 2 -->
             <div class="col-lg-4 mb-5">
                 <div class="card bg-light pb-2 hover-card fade-in">
-                    <img class="card-img-top mb-2 fade-in" src="assets/section2.jpg" alt="">
+                    <img class="card-img-top mb-2 fade-in" src="assets/irregular.jpg" alt="">
                     <div class="card-body text-center">
                         <h4 class="card-title fade-in">Irregular Group</h4>
                         <p class="card-text fade-in">Irregular group merupakan kelas tidak rutin yang disediakan sebagai
@@ -577,7 +807,7 @@ id="btn-back-to-top"
         </div>
         <!-- Right -->
         <div>
-            <a href="https://www.facebook.com/alhadidaycare/?locale=id_ID" target="_blank" class="text-dark me-4"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.youtube.com/@Alhadidaycareofficial/featured" target="_blank" class="text-dark me-4"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://www.facebook.com/alhadidaycare/?locale=id_ID" target="_blank" class="text-dark me-4"><i class="fab fa-facebook-f"></i></a>
             <a href="mailto:alhadidaycare2@gmail.com?subject=Permintaan Informasi&body=Halo, saya ingin tahu lebih lanjut tentang..." target="_blank" class="text-dark me-4"><i class="fa-regular fa-envelope"></i></a>
             <a href="https://www.instagram.com/alhadi_daycare/" target="_blank" class="text-dark me-4"><i class="fa-brands fa-instagram"></i></a>

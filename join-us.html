@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
     <link rel="stylesheet" href="css/styles.css" />
     <style>
       /* Menghapus padding horizontal pada body */
@@ -109,6 +110,62 @@
         height: auto;
         border: none;
       }
+      .dropdown-menu {
+        display: none; /* Default state */
+        position: absolute;
+        top: 100%; /* Posisi dropdown di bawah */
+        left: 0;
+        z-index: 1000;
+        float: left;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 0.125rem 0 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+      }
+
+      .navbar .dropdown:hover .dropdown-menu,
+      .navbar .dropdown .dropdown-menu.show {
+        display: block; /* Tampilkan saat di-hover atau saat toggle aktif */
+      }
+      /* Dropdown menu */
+      .dropdown-menu {
+        display: none; /* Default state */
+        position: absolute;
+        top: 100%; /* Posisi dropdown di bawah */
+        left: 0;
+        z-index: 1000;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 0.125rem 0 0;
+        font-size: 1rem;
+        background-color: #fff; /* Warna latar belakang */
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+      }
+
+      .navbar .dropdown:hover .dropdown-menu,
+      .navbar .dropdown .dropdown-menu.show {
+        display: block; /* Tampilkan dropdown saat hover atau toggle */
+      }
+
+      .dropdown-item {
+        color: rgb(4, 75, 41) !important; /* Warna item dropdown */
+      }
+
+      .dropdown-item:hover {
+        color: rgb(226, 129, 50) !important; /* Warna item saat hover */
+        background-color: rgba(
+          226,
+          129,
+          50,
+          0.1
+        ); /* Latar belakang ringan saat hover */
+      }
     </style>
   </head>
   <body>
@@ -173,24 +230,28 @@
                 href="#"
                 id="navbarDropdown"
                 role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
+                data-bs-toggle="dropdown"
               >
                 Fasilitas
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a
-                  class="nav-link dropdown-item text-black fw-semibold"
-                  href="building.html"
-                  >Gedung</a
-                >
-                <a
-                  class="nav-link dropdown-item text-black fw-semibold"
-                  href="menu.html"
-                  >Menu Makanan</a
-                >
-              </div>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item text-black fw-semibold"
+                    href="building.html"
+                  >
+                    Gedung
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-black fw-semibold"
+                    href="menu.html"
+                  >
+                    Menu Makanan
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -247,8 +308,8 @@
               class="card-body"
               style="font-family: 'Comic Sans MS', sans-serif"
             >
-              <h5 class="card-title">Daycare</h5>
-              <p class="card-text">
+              <h5 class="card-title fade-in">Daycare</h5>
+              <p class="card-text fade-in">
                 Bukan sekadar tempat penitipan, Alhadi Daycare adalah rumah
                 kedua bagi anak Anda! Kami menyediakan lingkungan yang aman,
                 nyaman, dan penuh kasih sayang, sehingga orang tua dapat bekerja
@@ -454,7 +515,7 @@
             <div class="card bg-light pb-2 hover-card fade-in">
               <img
                 class="card-img-top mb-2 fade-in"
-                src="assets/section2.jpg"
+                src="assets/irregular.jpg"
                 alt=""
               />
               <div class="card-body text-center">
@@ -539,7 +600,7 @@
         <!-- Right -->
         <div>
           <a
-            href="https://www.facebook.com/alhadidaycare/?locale=id_ID"
+            href="https://www.youtube.com/@Alhadidaycareofficial/featured"
             target="_blank"
             class="text-dark me-4"
             ><i class="fa-brands fa-youtube"></i

@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
     <link rel="stylesheet" href="css/styles.css" />
     <style>
       /* Menghapus padding horizontal pada body */
@@ -109,6 +110,62 @@
         height: auto;
         border: none;
       }
+      .dropdown-menu {
+        display: none; /* Default state */
+        position: absolute;
+        top: 100%; /* Posisi dropdown di bawah */
+        left: 0;
+        z-index: 1000;
+        float: left;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 0.125rem 0 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+      }
+
+      .navbar .dropdown:hover .dropdown-menu,
+      .navbar .dropdown .dropdown-menu.show {
+        display: block; /* Tampilkan saat di-hover atau saat toggle aktif */
+      }
+      /* Dropdown menu */
+      .dropdown-menu {
+        display: none; /* Default state */
+        position: absolute;
+        top: 100%; /* Posisi dropdown di bawah */
+        left: 0;
+        z-index: 1000;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 0.125rem 0 0;
+        font-size: 1rem;
+        background-color: #fff; /* Warna latar belakang */
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+      }
+
+      .navbar .dropdown:hover .dropdown-menu,
+      .navbar .dropdown .dropdown-menu.show {
+        display: block; /* Tampilkan dropdown saat hover atau toggle */
+      }
+
+      .dropdown-item {
+        color: rgb(4, 75, 41) !important; /* Warna item dropdown */
+      }
+
+      .dropdown-item:hover {
+        color: rgb(226, 129, 50) !important; /* Warna item saat hover */
+        background-color: rgba(
+          226,
+          129,
+          50,
+          0.1
+        ); /* Latar belakang ringan saat hover */
+      }
     </style>
   </head>
   <body>
@@ -171,24 +228,28 @@
                 href="#"
                 id="navbarDropdown"
                 role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
+                data-bs-toggle="dropdown"
               >
                 Fasilitas
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a
-                  class="nav-link dropdown-item text-black fw-semibold"
-                  href="building.html"
-                  >Gedung</a
-                >
-                <a
-                  class="nav-link active dropdown-item text-black fw-semibold"
-                  href="menu.html"
-                  >Menu Makanan</a
-                >
-              </div>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item text-black fw-semibold"
+                    href="building.html"
+                  >
+                    Gedung
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item active text-black fw-semibold"
+                    href="menu.html"
+                  >
+                    Menu Makanan
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -217,24 +278,84 @@
       </div>
     </div>
     <!-- Header End -->
-    <h3 class="display-0 text-center mt-5">Menu Makanan</h3>
-    <!-- Card Wrapper Start -->
-    <div class="d-flex justify-content-center mb-5">
+    <h3 class="display-0 text-center py-5 fade-in">Menu Makanan</h3>
+    <!-- Carousel Wrapper Start -->
+    <div class="d-flex justify-content-center mb-5 fade-in">
       <!-- Card Start -->
-      <div class="card" style="width: 24rem">
-        <img src="assets/menu.jpg" class="card-img-top" alt="..." />
+      <div class="card shadow-lg fade-in" style="width: 52%">
+        <!-- Carousel Start -->
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img src="assets/menu.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="assets/menu.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="assets/menu.jpg" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- Carousel End -->
+
+        <!-- Deskripsi Menu Start -->
         <div class="card-body">
+          <h5 class="card-title">Menu Makanan</h5>
           <p class="card-text">
-            Menu makanan yang disediakan di AlHadi Daycare adalah sebagai
-            berikut. <br /><br />
-            Membiasakan pola makan sehat sejak dini dengan menyajikan makanan
-            bergizi, aman, dan sesuai kebutuhan usia anak.
+            Di Al Hadi Daycare, kami memahami bahwa asupan nutrisi yang seimbang
+            dan bergizi adalah kunci utama untuk mendukung pertumbuhan fisik dan
+            perkembangan kognitif anak-anak. <br /><br />
+            Oleh karena itu, setiap harinya kami menyajikan menu makanan yang
+            dirancang secara khusus untuk memenuhi kebutuhan nutrisi anak-anak
+            dalam suasana makan yang ceria dan menyenangkan.
           </p>
         </div>
+        <!-- Deskripsi Menu End -->
       </div>
       <!-- Card End -->
     </div>
-    <!-- Card Wrapper End -->
+    <!-- Carousel Wrapper End -->
 
     <!-- Back to Top -->
     <button

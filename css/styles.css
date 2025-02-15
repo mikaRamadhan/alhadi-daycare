@@ -76,6 +76,11 @@
 .nav-link.active {
   color: rgb(226, 129, 50) !important;
 }
+.dropdown-item.active {
+  background-color: white;
+  color: rgb(226, 129, 50) !important; /* Warna untuk item aktif */
+  font-weight: bold; /* Tebalkan teks item aktif */
+}
 
 .navbar-brand {
   color: rgb(

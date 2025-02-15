@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
     <link rel="stylesheet" href="css/styles.css" />
     <style>
       /* Menghapus padding horizontal pada body */
@@ -109,6 +110,62 @@
         height: auto;
         border: none;
       }
+      .dropdown-menu {
+        display: none; /* Default state */
+        position: absolute;
+        top: 100%; /* Posisi dropdown di bawah */
+        left: 0;
+        z-index: 1000;
+        float: left;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 0.125rem 0 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+      }
+
+      .navbar .dropdown:hover .dropdown-menu,
+      .navbar .dropdown .dropdown-menu.show {
+        display: block; /* Tampilkan saat di-hover atau saat toggle aktif */
+      }
+      /* Dropdown menu */
+      .dropdown-menu {
+        display: none; /* Default state */
+        position: absolute;
+        top: 100%; /* Posisi dropdown di bawah */
+        left: 0;
+        z-index: 1000;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 0.125rem 0 0;
+        font-size: 1rem;
+        background-color: #fff; /* Warna latar belakang */
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+      }
+
+      .navbar .dropdown:hover .dropdown-menu,
+      .navbar .dropdown .dropdown-menu.show {
+        display: block; /* Tampilkan dropdown saat hover atau toggle */
+      }
+
+      .dropdown-item {
+        color: rgb(4, 75, 41) !important; /* Warna item dropdown */
+      }
+
+      .dropdown-item:hover {
+        color: rgb(226, 129, 50) !important; /* Warna item saat hover */
+        background-color: rgba(
+          226,
+          129,
+          50,
+          0.1
+        ); /* Latar belakang ringan saat hover */
+      }
     </style>
   </head>
   <body>
@@ -161,7 +218,9 @@
               >
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link text-black fw-semibold" href="contact.html"
+              <a
+                class="nav-link text-black fw-semibold"
+                href="contact.html"
                 >Kontak</a
               >
             </li>
@@ -171,31 +230,34 @@
                 href="#"
                 id="navbarDropdown"
                 role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
+                data-bs-toggle="dropdown"
               >
                 Fasilitas
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a
-                  class="nav-link active dropdown-item text-black fw-semibold"
-                  href="building.html"
-                  >Gedung</a
-                >
-                <a
-                  class="nav-link dropdown-item text-black fw-semibold"
-                  href="menu.html"
-                  >Menu Makanan</a
-                >
-              </div>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item active text-black fw-semibold"
+                    href="building.html"
+                  >
+                    Gedung
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-black fw-semibold"
+                    href="menu.html"
+                  >
+                    Menu Makanan
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- Navbar End -->
-
     <!-- Header Start -->
     <div class="header">
       <div class="header-content">
@@ -217,11 +279,11 @@
     </div>
     <!-- Header End -->
     <!-- Card Container Start -->
-    <h3 class="display-0 text-center mt-5">Fasilitas Gedung Kami</h3>
+    <h3 class="display-0 text-center mt-5 fade-in">Fasilitas Gedung Kami</h3>
     <div class="container my-5">
       <div class="row justify-content-center">
         <!-- Card 1 -->
-        <div class="col-md-6 mb-4">
+        <div class="col-md-6 mb-4 fade-in">
           <div class="card" style="max-width: 540px; margin: auto">
             <div class="row g-0">
               <div class="col-md-4">
@@ -236,19 +298,27 @@
                   <h4 class="card-title">Al Hadi JL.Tolo</h4>
                   <p class="card-text">
                     Gedung pertama dan kedua berlokasi di Jl. Tolo II no. 3C,
-                    Srengseng, Kembangan, Jakarta Barat 11630. Tampilkan papan
-                    nama bertuliskan 'Alhadi Daycare' dengan informasi kontak
-                    <br /><span style="color: green"
-                      >081289497397 (Bunda Ani)</span
-                    >.
+                    Srengseng, Kembangan, Jakarta Barat 11630.
                   </p>
+                  <a
+                  href="https://api.whatsapp.com/send?phone=6285772561620&text=Assalamualaikum%20,%20saya%20ingin%20bertanya%20tentang%20al%20hadi%20daycare%20cabang%20tolo."
+                  class="btn btn-success btn-sm text-light"
+                  target="_blank"
+                  ><i class="fa-brands fa-whatsapp"></i> Hubungi Kami</a
+                >
+                <a
+                  href="https://maps.app.goo.gl/iVs8waT6UBkxZwcU7"
+                  class="btn btn-outline-success btn-sm"
+                  target="_blank"
+                  ><i class="fa-solid fa-map-location-dot"></i> Lokasi</a
+                >
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="col-md-6 mb-4">
+        <div class="col-md-6 mb-4 fade-in">
           <div class="card" style="max-width: 540px; margin: auto">
             <div class="row g-0">
               <div class="col-md-4">
@@ -262,19 +332,28 @@
                 <div class="card-body">
                   <h4 class="card-title">Al Hadi Jl.Flamboyan</h4>
                   <p class="card-text">
-                    Gedung Ketiga berlokasi di Jl. Flamboyan no. 47, Srengseng,
-                    Kembangan, Jakarta Barat 11630, dengan papan nama
-                    mencantumkan <br /><span style="color: green"
-                      >085717996523 (Ms Uut)</span
-                    >.
+                    Gedung ketiga berlokasi di Jl. Flamboyan no. 47, Srengseng,
+                    Kembangan, Jakarta Barat 11630.
                   </p>
+                  <a
+                  href="https://api.whatsapp.com/send?phone=6285717996523&text=Assalamualaikum%20,%20saya%20ingin%20bertanya%20tentang%20al%20hadi%20daycare%20cabang%20flamboyan."
+                  class="btn btn-success btn-sm text-light"
+                  target="_blank"
+                  ><i class="fa-brands fa-whatsapp"></i> Hubungi Kami</a
+                >
+                <a
+                  href="https://maps.app.goo.gl/fXzjTeGDWXNQwdqf8"
+                  class="btn btn-outline-success btn-sm
+                  target="_blank"
+                  ><i class="fa-solid fa-map-location-dot"></i> Lokasi</a
+                >
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="col-md-6 mb-4">
+        <div class="col-md-6 mb-4 fade-in">
           <div class="card" style="max-width: 540px; margin: auto">
             <div class="row g-0">
               <div class="col-md-4">
@@ -288,11 +367,21 @@
                 <div class="card-body">
                   <h4 class="card-title">Al Hadi Warakas</h4>
                   <p class="card-text">
-                    Gedung ketiga berada di Jl. Warakas 2 gang 2B Rt. 05/02 No.
-                    4 Tj.Priok, Jakarta Utara 14370. Tampilkan banner dengan
-                    informasi kontak <br />
-                    <span style="color: green">081223509783 (Ms Ima)</span>.
+                    Gedung kedua berada di Jl. Warakas 2 gang 2B Rt. 05/02 No.
+                    4 Tj.Priok, Jakarta Utara 14370. 
                   </p>
+                  <a
+                  href="https://api.whatsapp.com/send?phone=6281223509783&text=Assalamualaikum%20,%20saya%20ingin%20bertanya%20tentang%20al%20hadi%20daycare%20cabang%20warakas."
+                  class="btn btn-success btn-sm text-light"
+                  target="_blank"
+                  ><i class="fa-brands fa-whatsapp"></i> Hubungi Kami</a
+                >
+                <a
+                  href="https://maps.app.goo.gl/Z1M2CUPmVQZiwUur9"
+                  class="btn btn-outline-success btn-sm"
+                  target="_blank"
+                  ><i class="fa-solid fa-map-location-dot"></i> Lokasi</a
+                >
                 </div>
               </div>
             </div>

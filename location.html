@@ -10,10 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Monday+Feelings&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="stylesheet" href="css/styles.css" />
     <style>
       /* Menghapus padding horizontal pada body */
@@ -113,6 +110,62 @@
         height: auto;
         border: none;
       }
+      .dropdown-menu {
+        display: none; /* Default state */
+        position: absolute;
+        top: 100%; /* Posisi dropdown di bawah */
+        left: 0;
+        z-index: 1000;
+        float: left;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 0.125rem 0 0;
+        font-size: 1rem;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+      }
+
+      .navbar .dropdown:hover .dropdown-menu,
+      .navbar .dropdown .dropdown-menu.show {
+        display: block; /* Tampilkan saat di-hover atau saat toggle aktif */
+      }
+      /* Dropdown menu */
+      .dropdown-menu {
+        display: none; /* Default state */
+        position: absolute;
+        top: 100%; /* Posisi dropdown di bawah */
+        left: 0;
+        z-index: 1000;
+        min-width: 10rem;
+        padding: 0.5rem 0;
+        margin: 0.125rem 0 0;
+        font-size: 1rem;
+        background-color: #fff; /* Warna latar belakang */
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+      }
+
+      .navbar .dropdown:hover .dropdown-menu,
+      .navbar .dropdown .dropdown-menu.show {
+        display: block; /* Tampilkan dropdown saat hover atau toggle */
+      }
+
+      .dropdown-item {
+        color: rgb(4, 75, 41) !important; /* Warna item dropdown */
+      }
+
+      .dropdown-item:hover {
+        color: rgb(226, 129, 50) !important; /* Warna item saat hover */
+        background-color: rgba(
+          226,
+          129,
+          50,
+          0.1
+        ); /* Latar belakang ringan saat hover */
+      }
     </style>
   </head>
   <body>
@@ -177,24 +230,28 @@
                 href="#"
                 id="navbarDropdown"
                 role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
+                data-bs-toggle="dropdown"
               >
                 Fasilitas
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a
-                  class="nav-link dropdown-item text-black fw-semibold"
-                  href="building.html"
-                  >Gedung</a
-                >
-                <a
-                  class="nav-link dropdown-item text-black fw-semibold"
-                  href="menu.html"
-                  >Menu Makanan</a
-                >
-              </div>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item text-black fw-semibold"
+                    href="building.html"
+                  >
+                    Gedung
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-black fw-semibold"
+                    href="menu.html"
+                  >
+                    Menu Makanan
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -223,24 +280,26 @@
     </div>
     <!-- Header End -->
     <!-- Location Cards Start -->
-    <h3 class="display-0 text-center mt-3">Temukan Kami Di</h3>
+    <h3 class="display-0 text-center mt-3 fade-in">Temukan Kami Di</h3>
     <section class="py-6 m-5">
       <div class="container">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
           <div class="col">
             <div
-              class="card card-hover border"
+              class="card card-hover border fade-in"
               style="max-width: 350px; margin: auto"
             >
               <a href="#!">
                 <img
                   src="assets/loc-t3d.png"
                   alt="webinar-1"
-                  class="img-fluid w-100 rounded-top-3"
+                  class="img-fluid w-100 rounded-top-3 fade-in"
                 />
               </a>
               <div class="card-body">
-                <h5 class="mb-4 text-truncate">Al-Hadi Jl Tolo 3C,3D</h5>
+                <h5 class="mb-4 text-truncate fade-in">
+                  Al-Hadi Jl Tolo 3C,3D
+                </h5>
                 <div class="mb-4">
                   <div class="mb-3 lh-1">
                     <span class="me-1">
@@ -272,7 +331,7 @@
           </div>
           <div class="col">
             <div
-              class="card card-hover border"
+              class="card card-hover border fade-in"
               style="max-width: 350px; margin: auto"
             >
               <a href="#!">
@@ -283,7 +342,7 @@
                 />
               </a>
               <div class="card-body">
-                <h5 class="mb-4 text-truncate">Al-Hadi Flamboyan</h5>
+                <h5 class="mb-4 text-truncate fade-in">Al-Hadi Flamboyan</h5>
                 <div class="mb-4">
                   <div class="mb-3 lh-1">
                     <span class="me-1">
@@ -315,7 +374,7 @@
           </div>
           <div class="col">
             <div
-              class="card card-hover border"
+              class="card card-hover border fade-in"
               style="max-width: 350px; margin: auto"
             >
               <a href="#!">
@@ -326,7 +385,7 @@
                 />
               </a>
               <div class="card-body">
-                <h5 class="mb-4 text-truncate">Al-Hadi Warakas</h5>
+                <h5 class="mb-4 text-truncate fade-in">Al-Hadi Warakas</h5>
                 <div class="mb-4">
                   <div class="mb-3 lh-1">
                     <span class="me-1">
@@ -396,7 +455,7 @@
         <!-- Right -->
         <div>
           <a
-            href="https://www.facebook.com/alhadidaycare/?locale=id_ID"
+            href="https://www.youtube.com/@Alhadidaycareofficial/featured"
             target="_blank"
             class="text-dark me-4"
             ><i class="fa-brands fa-youtube"></i
